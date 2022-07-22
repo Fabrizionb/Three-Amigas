@@ -48,3 +48,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 #
 #
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8aaa98661d15e678675647ee435fc7288739fdb7
