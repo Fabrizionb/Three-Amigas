@@ -23,31 +23,15 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+
+
 /* NavBar, Header & Footer Start */
 .gradient-custom {
-    /* fallback for old browsers */
-    /* background: #6a11cb;
-    
-    /* Chrome 10-25, Safari 5.1-6 
-    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
-    background: linear-gradient(to right, #C1DABC, #A5D04E) */
-
     background: var(--first-color);
 }
 
 header {
     background: var(--first-color);
-}
-
-/* Color iconos Footer */
-body>footer>div.container.pt-4>section>a>i {
-    color: var(--second-color);
-}
-
-body>footer>div.container.pt-4>section>a>i:hover {
-    color: var(--third-color);
 }
 
 nav.navbar {
@@ -57,49 +41,42 @@ nav.navbar {
 li.nav-item {
     font-size: 1.2rem;
     font-weight: bold;
-
 }
 
 a.nav-link:hover {
     color: #023b04;
 }
 
-.App {
-  text-align: center;
+/* Color iconos Footer */
+#root > footer > div.container.pt-4 > section > a > i {
+  color: var(--second-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root > footer > div.container.pt-4 > section > a > i:hover {
+  color: var(--third-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footerBar {
+  background-color: var(--third-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ body    {
+  background-color: #F5F5F5
 }
 
-.App-link {
-  color: #61dafb;
+
+.imgBlog {
+  border-radius: 5px 5px 0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  -webkit-box-shadow: 0px 8px 15px 8px #7C7C7C; 
+  box-shadow: 0px 8px 15px 8px #7C7C7C;
+transition: all 0.4s ease-out;
 }
 
+.card:hover {
+  transition: all 0.4s ease-out;
+  -webkit-box-shadow: 0px 10px 15px 11px #7C7C7C; 
+  box-shadow: 0px 10px 15px 11px #7C7C7C;
+}

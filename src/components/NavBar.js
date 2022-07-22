@@ -3,7 +3,7 @@ function  NavBar() {
     const button = {marginRight:"2vh", marginLeft:"2vh"}
     return (
         
-        <header> 
+        <header className="container"> 
         <nav className="navbar navbar-expand-lg bg-light " role="navigation">
                 <div className="container-fluid d-flex navbar">
                     <a className="navbar-brand" href="../index.html">
