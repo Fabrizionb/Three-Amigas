@@ -7,17 +7,17 @@ function Footer() {
             {/* <!-- Section: Social media --> */}
             <section className="mb-4">
                 {/* <!-- Google --> */}
-                <a className="btn btn-link btn-floating btn-lg text-dark m-1" href="mailto: fabrizionbertolo@gmail.com"
-                    role="button" data-mdb-ripple-color="dark"><i className="fab fa-google"></i></a>
+                <a className="btn btn-link btn-floating btn-lg text-dark m-1" href="mailto: fabrizionbertolo@gmail.com" 
+                    role="button" data-mdb-ripple-color="dark" target="_blank"><i className="fab fa-google"></i></a>
 
                 {/* <!-- Linkedin --> */}
                 <a className="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://www.linkedin.com/in/fabrizio-bertolo/" role="button" data-mdb-ripple-color="dark"><i
+                    href="https://www.linkedin.com/in/fabrizio-bertolo/" role="button" data-mdb-ripple-color="dark" target="_blank"><i
                         className="fab fa-linkedin"></i></a>
 
                 {/* <!-- Github --> */}
                 <a className="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/Fabrizionb"
-                    role="button" data-mdb-ripple-color="dark"><i className="fab fa-github"></i></a>
+                    role="button" data-mdb-ripple-color="dark" target="_blank"><i className="fab fa-github"></i></a>
             </section>
             {/* <!-- Section: Social media --> */}
         </div>
