@@ -31,10 +31,10 @@ function  MainContent() {
 {
     content.map( (content, indice) => {
         return (
-            <div key={indice} className="col-lg-4 col-md-12 mb-4">
+            <div key={indice} className="col-lg-4 col-md-12 mb-2">
                 <div  className="card h-100">
                     <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src={content.image} className="img-fluid imgBlog" />
+                        <img src={content.image} className="img-fluid w-100 imgBlog" />
                         <a href="#!">
                             <div className="mask" style={mask}>
                             </div>
