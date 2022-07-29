@@ -1,0 +1,15 @@
+/* Color iconos Footer */
+i.fab {
+  color: var(--first-color);
+}
+
+i.fab:hover {
+  color: var(--fourth-color);
+}
+
+.footerBar {
+  background-color: var(--first-color);
+  color: var(--second-font-color) !important;
+  border-radius: 25px;
+  margin-bottom: 0.5vh;
+}

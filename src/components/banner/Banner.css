@@ -1,0 +1,18 @@
+.backgroundImg {
+  border-radius: 1px;
+}
+
+@media (max-width: 600px) {
+  .imgContainer {
+    display: block;
+    height: 12vh;
+    background-image: url("/public/img/banner3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .backgroundImg {
+    display: none;
+  }
+}

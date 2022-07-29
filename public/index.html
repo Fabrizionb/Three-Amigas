@@ -2,7 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./img/favicon.svg" />
+    <!-- <link rel="icon" href="./img/favicon.svg" /> -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231c73be%22></rect><path fill=%22%23fff%22 d=%22M26.59 27.73L13.91 33.67Q12.63 33.17 11.79 32.18Q10.94 31.19 10.94 29.71L10.94 29.71Q10.94 28.12 11.74 27.13Q12.53 26.14 14.51 25.35L14.51 25.35L28.37 19.31L30.25 19.31Q32.23 19.31 33.42 20.50Q34.61 21.69 34.61 23.67L34.61 23.67L34.61 80.29Q34.01 80.49 33.02 80.74Q32.03 80.99 30.84 80.99L30.84 80.99Q26.59 80.99 26.59 77.32L26.59 77.32L26.59 27.73ZM66.29 18.72L66.29 18.72Q70.94 18.72 74.80 19.76Q78.66 20.80 81.43 22.87Q84.20 24.95 85.74 28.02Q87.27 31.09 87.27 35.15L87.27 35.15Q87.27 38.12 86.28 40.45Q85.29 42.77 83.86 44.46Q82.42 46.14 80.74 47.13Q79.06 48.12 77.77 48.42L77.77 48.42Q79.75 49.01 81.73 50.25Q83.71 51.49 85.34 53.32Q86.98 55.15 88.02 57.67Q89.06 60.20 89.06 63.37L89.06 63.37Q89.06 67.82 87.42 71.19Q85.79 74.55 82.82 76.78Q79.85 79.01 75.69 80.15Q71.53 81.28 66.58 81.28L66.58 81.28Q62.52 81.28 59.11 80.64Q55.69 80.00 53.22 78.86Q50.74 77.72 49.36 76.33Q47.97 74.95 47.97 73.46L47.97 73.46Q47.97 72.08 48.71 71.09Q49.46 70.10 50.64 69.40L50.64 69.40Q53.22 71.38 56.93 72.97Q60.64 74.55 66.58 74.55L66.58 74.55Q73.12 74.55 77.18 71.73Q81.23 68.91 81.23 63.17L81.23 63.17Q81.23 58.12 77.47 55.05Q73.71 51.98 66.58 51.98L66.58 51.98L58.37 51.98Q57.97 51.49 57.67 50.54Q57.38 49.60 57.38 48.61L57.38 48.61Q57.38 47.53 57.67 46.63Q57.97 45.74 58.37 45.25L58.37 45.25L65.89 45.25Q73.22 45.25 76.33 42.53Q79.45 39.80 79.45 35.35L79.45 35.35Q79.45 30.50 75.94 27.97Q72.42 25.45 66.19 25.45L66.19 25.45Q61.43 25.45 57.82 26.88Q54.21 28.32 51.83 30.00L51.83 30.00Q50.84 29.51 50.05 28.47Q49.26 27.43 49.26 26.04L49.26 26.04Q49.26 24.76 50.54 23.42Q51.83 22.08 54.16 21.04Q56.48 20.00 59.60 19.36Q62.72 18.72 66.29 18.72Z%22></path></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -10,6 +21,11 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <script
+      src="https://kit.fontawesome.com/b926aedcdc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -25,13 +41,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
-    <!-- Bootstrap Style -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <title>Ecommerce</title>
+    <title>Reasons to Buy</title>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -45,16 +57,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
-    </script>
+
     <!-- Fontawesomeicons -->
-    <script src="https://kit.fontawesome.com/b926aedcdc.js" crossorigin="anonymous"></script>
-        
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
-    
+    <script
+      src="https://kit.fontawesome.com/b926aedcdc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
