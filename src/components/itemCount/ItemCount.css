@@ -1,0 +1,14 @@
+.textCount {
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.itemCount{
+    color: var(--third-color);
+    background-color: var(--second-color)
+}
+
+.itemCount:hover{
+    background-color: var(--second-color);
+    color: var(--first-color);
+}

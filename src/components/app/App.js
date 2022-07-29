@@ -75,7 +75,7 @@ function App() {
       description: "MercadoPago Logo",
     },
   ];
-
+const greeting = [{greeting:"Este es un Greeting"}]
   const banner = [
     {
       img: "../../img/banner.png",
@@ -106,7 +106,7 @@ function App() {
       </>
       {/* Payment Method End*/}
 
-      <ItemListContainer data={products[0]} />
+      <ItemListContainer data={greeting[0]} />
 
       {/* Card Start*/}
       <h4 className='text-center mt-5 flashTitle'>Flash Sales</h4>
