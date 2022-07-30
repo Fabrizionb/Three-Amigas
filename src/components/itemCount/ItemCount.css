@@ -3,7 +3,7 @@
   margin-right: 2vh;
 }
 
-.itemCount{
+/* .itemCount{
     color: var(--third-color);
     background-color: var(--second-color)
 }
@@ -11,4 +11,24 @@
 .itemCount:hover{
     background-color: var(--second-color);
     color: var(--first-color);
+} */
+
+#plus-btn {
+  background-color: rgb(130, 206, 130);
+  color: #fff;
+}
+
+#plus-btn:hover {
+  background-color: rgb(89, 206, 89);
+  color: #fff;
+}
+
+#minus-btn {
+  background-color: rgb(209, 128, 128);
+  color: #fff;
+}
+
+#minus-btn:hover {
+  background-color: rgb(211, 82, 82);
+  color: #fff;
 }

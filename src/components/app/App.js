@@ -9,46 +9,48 @@ import Banner from "../../components/banner/Banner";
 import Card from "../../components/card/Card";
 import ItemListContainer from "../../components/itemlistcontainer/ItemListContainer";
 
+
+
 function App() {
   let products = [
     {
       id: 0,
-      name: "Glasses",
+      name: "Shiny Glasses",
       price: 1000,
       description: "Cool glasses",
       promotion: "Free Shipping",
       image: "https://picsum.photos/200/",
-      category: "accesories",
+      category: "Accesories",
       outlet: true,
     },
     {
       id: 0,
-      name: "Dress",
+      name: "Cool Dress",
       price: 1000,
       description: "Jean Dress",
       promotion: "Free Shipping",
       image: "https://picsum.photos/200/",
-      category: "cloth",
+      category: "Cloth",
       outlet: true,
     },
     {
       id: 0,
-      name: "Jacket",
+      name: "Leather Jacket",
       price: 1000,
       description: "Leather Jacket",
       promotion: "Free Shipping",
       image: "https://picsum.photos/200/",
-      category: "cloths",
+      category: "Cloths",
       outlet: false,
     },
     {
       id: 0,
-      name: "Scarf",
+      name: "Soft Scarf",
       price: 1000,
       description: "Whool Scarf",
       promotion: "Free Shipping",
       image: "https://picsum.photos/200/",
-      category: "accesories",
+      category: "Accesories",
       outlet: true,
     },
   ];

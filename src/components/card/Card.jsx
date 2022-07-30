@@ -9,11 +9,12 @@ function Card(props) {
       <img src={props.data.image} alt={props.data.description} />
     </div>
     <div className="card-detail card-body">
-      <h2>{props.data.name}</h2>
+      <h4>{props.data.name}</h4>
       <p>{props.data.description}</p>
+      <p>Category: {props.data.category}</p>
       <h3>$ {props.data.price}</h3>
       {/* <Button text="Ver más"/>         */}
-      <ItemCount />
+      <ItemCount initial={1} stock={30} />
     </div>
   </div>
   );

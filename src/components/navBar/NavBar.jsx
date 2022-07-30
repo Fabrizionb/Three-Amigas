@@ -3,8 +3,8 @@ import "../navBar/NavBar.css";
 
 function NavBar() {
   return (
-    <header className='container'>
-      <nav className='navbar navbar-expand-lg bg-light'>
+    <header className='container sticky-top'>
+      <nav className='navbar navbar-expand-lg bg-light '>
         <div className='container-fluid'>
           <a className='navbar-brand' href='#'>
             {" "}
