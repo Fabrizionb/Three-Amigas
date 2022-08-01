@@ -11,7 +11,7 @@ function Button(props) {
     <> 
     <button
       onClick={notify}
-      class='btn  btn-xs addToCart col-12'>
+      className='btn  btn-xs addToCart col-12'>
       {props.text}
     </button>
     <ToastContainer
