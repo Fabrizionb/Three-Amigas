@@ -11,7 +11,7 @@ function Button(props) {
     <> 
     <button
       onClick={notify}
-      className='btn  btn-xs addToCart col-12'>
+      className='btn  btn-xs addToCart col-12 mt-auto align-self-start'>
       {props.text}
     </button>
     <ToastContainer

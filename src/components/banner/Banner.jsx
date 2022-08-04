@@ -1,11 +1,18 @@
 import React from "react";
 import "../banner/Banner.css";
 
-function Banner(props) {
+function Banner() {
+
+  const arrayBanner = [
+    {
+      img: "../../../img/banner.png",
+    },
+  ];
+
   return (
     <>
       <img
-        src={props.data.img}
+        src={arrayBanner[0].img}
         alt=''
         className='backgroundImg text-center mt-4'
       />

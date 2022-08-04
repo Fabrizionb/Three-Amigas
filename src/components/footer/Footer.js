@@ -1,3 +1,4 @@
+import "../footer/Footer.css";
 function Footer() {
   return (
     <footer className='text-center text-white gradient-custom footer mt-auto container'>

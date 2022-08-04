@@ -1,22 +1,21 @@
-import '../card/Card.css'
 import ItemCount from "../itemCount/ItemCount";
-function Card(props) {
-  const mask = { backgroundColor: "rgba(251, 251, 251, 0.15)" };
 
+import "./Card.css";
+
+function Card({ name, price, image, category, description, init, stock }) {
   return (
-    <div className="card">
-    <div className="card-img">
-      <img src={props.data.image} alt={props.data.description} />
+    <div className='col-lg-3 mb-3 d-flex align-items-stretch'>
+      <div className='card'>
+        <img src={image} className='card-img-top' alt='Card Image' />
+        <div className='card-body d-flex flex-column'>
+          <h5 className='card-title'>{name}</h5>
+          <p className='card-text mb-4'>{description}</p>
+          <p>Category: {category}</p>
+          <h3>$ {price}</h3>
+          <ItemCount initial={init} stock={stock} />
+        </div>
+      </div>
     </div>
-    <div className="card-detail card-body">
-      <h4>{props.data.name}</h4>
-      <p>{props.data.description}</p>
-      <p>Category: {props.data.category}</p>
-      <h3>$ {props.data.price}</h3>
-      {/* <Button text="Ver más"/>         */}
-      <ItemCount initial={1} stock={30} />
-    </div>
-  </div>
   );
 }
 

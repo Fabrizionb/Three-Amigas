@@ -1,14 +1,11 @@
 import "../payment/Payment.css";
-function Payment(props) {
+
+function Payment({name, id, img, description}) {
   return (
     <>
       <div className='col-3 text-center'>
-        <img
-          className='img-payment'
-          src={props.data.img}
-          alt={props.data.description}
-        />
-        <h6>{props.data.name}</h6>
+        <img className='img-payment' src={img} alt={description} />
+        <h6 className={id}>{name}</h6>
       </div>
     </>
   );

@@ -13,12 +13,13 @@ function ItemCount(props) {
   const handleDecrement = () =>
     count > props.initial ? setCount(count - 1) : setCount(count - 0);
 
-  const onAdd = () => {
-    /*  */
-  };
+  function onAdd(amount) {
+    console.log(`You add ${amount} products`);
+    return ItemCount();
+  }
 
   return (
-    <div className='container mt-5 d-flex align-items-center justify-content-center'>
+    <div className='container mt-5 d-flex align-items-center justify-content-center '>
       <div className='row'>
         <div className='col'>
           <button
@@ -39,7 +40,7 @@ function ItemCount(props) {
             +
           </button>
         </div>
-        <Button  text={"Add to Cart"}/>
+        <Button text={"Add to Cart"} />
       </div>
     </div>
   );
