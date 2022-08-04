@@ -39,7 +39,7 @@ function ItemCount(props) {
             +
           </button>
         </div>
-        <Button onClick={( ) => props.onAdd( count ) } text={"Add to Cart"} />
+        <Button onAdd={props.onAdd} count={count} text={"Add to Cart"} />
       </div>
     </div>
   );

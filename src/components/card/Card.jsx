@@ -2,7 +2,7 @@ import ItemCount from "../itemCount/ItemCount";
 
 import "./Card.css";
 
-function Card({ name, price, image, category, description, stock, onAdd }) {
+function Card({ name, price, image, category, description, stock, onAdd, count }) {
   return (
     <div className='col-lg-3 mb-3 d-flex align-items-stretch cardContainer'>
       <div className='card'>

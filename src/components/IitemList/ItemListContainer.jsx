@@ -12,8 +12,7 @@ function ItemListContainer(props) {
   const [data, setData] = useState([{}]);
 
   function onAdd(count) {
-    alert("onAdd")
-    console.log(`You add ${count} products`);
+      console.log(`You add ${count} products`);
   }
 
   useEffect(() => {
@@ -42,7 +41,8 @@ function ItemListContainer(props) {
                 category={item.category}
                 description={item.description}
                 stock={item.stock}
-                onAdd={props.onAdd}
+                onAdd={onAdd}
+                count={item.count}
               />
             ))
 
