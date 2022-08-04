@@ -12,7 +12,7 @@ function Card({ name, price, image, category, description, init, stock }) {
           <p className='card-text mb-4'>{description}</p>
           <p>Category: {category}</p>
           <h3>$ {price}</h3>
-          <ItemCount initial={init} stock={stock} onAdd={onAdd}/>
+          <ItemCount initial={init} stock={stock} />
         </div>
       </div>
     </div>
