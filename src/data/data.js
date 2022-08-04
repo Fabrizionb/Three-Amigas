@@ -8,8 +8,7 @@ const itemsData = [
     image: "https://cdn.mos.cms.futurecdn.net/CocLKJZdYRE9P39XpfDRuM.jpg",
     category: "Shoes",
     outlet: true,
-    init: 1,
-    stock: 81,
+    stock: 18,
   },
   {
     id: 2,
@@ -21,8 +20,7 @@ const itemsData = [
       "https://i.pinimg.com/736x/93/05/6d/93056d66214b41ffa856fdfffc536014.jpg",
     category: "Shoes",
     outlet: true,
-    init: 1,
-    stock: 91,
+    stock: 19,
   },
   {
     id: 3,
@@ -34,7 +32,6 @@ const itemsData = [
       "https://i.pinimg.com/originals/0d/3b/c5/0d3bc51d305cbf1eb1d360e685d13e71.jpg",
     category: "Shoes",
     outlet: false,
-    init: 1,
     stock: 4,
   },
   {
@@ -47,8 +44,7 @@ const itemsData = [
       "https://media1.popsugar-assets.com/files/thumbor/cgVrv6PPROBbqqAog-8xsCLK-M4/0x2100:4200x6300/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/06/07/718/n/1922564/a82581365cfa8d7b0a9481.08828189_/i/Best-Flip-Flops-Women-2019.jpg",
     category: "Shoes",
     outlet: false,
-    init: 1,
-    stock: 58,
+    stock: 18,
   },
   {
     id: 5,
@@ -60,8 +56,7 @@ const itemsData = [
       "https://i5.walmartimages.com/asr/ccf7b933-5a5e-4c4c-b9f1-294960486c8f.a0dbed8c6bef34b8f88a9db4e1e328e7.jpeg",
     category: "Shoes",
     outlet: true,
-    init: 1,
-    stock: 1,
+    stock: 15,
   },
   {
     id: 6,
@@ -73,8 +68,7 @@ const itemsData = [
       "https://ae01.alicdn.com/kf/Hf710508447bd4bdc9556c943052e8898u/Top-Style-Fashion-Women-s-Luxury-Leather-Band-Analog-Quartz-Wrist-Watch-Golden-Ladies-Watch-Women.jpg",
     category: "Accesories",
     outlet: false,
-    init: 1,
-    stock: 62,
+    stock: 12,
   },
   {
     id: 7,
@@ -86,8 +80,7 @@ const itemsData = [
       "https://i.pinimg.com/564x/41/61/9c/41619c6d130bf9591872d9bc4b3945e1.jpg",
     category: "Accesories",
     outlet: true,
-    init: 1,
-    stock: 5,
+    stock: 15,
   },
   {
     id: 8,
@@ -98,8 +91,7 @@ const itemsData = [
     image: "https://m.media-amazon.com/images/I/71M0-eZ2HHS._AC_UX385_.jpg",
     category: "Accesories",
     outlet: false,
-    init: 1,
-    stock: 88,
+    stock: 18,
   },
   {
     id: 9,
@@ -110,8 +102,7 @@ const itemsData = [
     image: "http://dummyimage.com/232x100.png/cc0000/ffffff",
     category: "Accesories",
     outlet: false,
-    init: 1,
-    stock: 58,
+    stock: 28,
   },
   {
     id: 10,
@@ -122,8 +113,7 @@ const itemsData = [
     image: "http://dummyimage.com/232x100.png/cc0000/ffffff",
     category: "Accesories",
     outlet: false,
-    init: 1,
-    stock: 30,
+    stock: 20,
   },
   {
     id: 11,
@@ -134,8 +124,7 @@ const itemsData = [
     image: "http://dummyimage.com/232x100.png/cc0000/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
-    stock: 79,
+    stock: 19,
   },
   {
     id: 12,
@@ -146,8 +135,7 @@ const itemsData = [
     image: "http://dummyimage.com/232x100.png/cc0000/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
-    stock: 7,
+    stock: 17,
   },
   {
     id: 13,
@@ -158,8 +146,7 @@ const itemsData = [
     image: "http://dummyimage.com/232x100.png/cc0000/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
-    stock: 72,
+    stock: 12,
   },
   {
     id: 14,
@@ -170,8 +157,7 @@ const itemsData = [
     image: "http://dummyimage.com/121x100.png/5fa2dd/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
-    stock: 43,
+    stock: 13,
   },
   {
     id: 15,
@@ -182,7 +168,6 @@ const itemsData = [
     image: "http://dummyimage.com/205x100.png/5fa2dd/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
     stock: 24,
   },
   {
@@ -194,8 +179,7 @@ const itemsData = [
     image: "http://dummyimage.com/115x100.png/5fa2dd/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
-    stock: 74,
+    stock: 14,
   },
   {
     id: 17,
@@ -206,8 +190,7 @@ const itemsData = [
     image: "http://dummyimage.com/232x100.png/cc0000/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
-    stock: 56,
+    stock: 16,
   },
   {
     id: 18,
@@ -218,8 +201,7 @@ const itemsData = [
     image: "http://dummyimage.com/160x100.png/ff4444/ffffff",
     category: "Clothes",
     outlet: false,
-    init: 1,
-    stock: 40,
+    stock: 20,
   },
   {
     id: 19,
@@ -230,8 +212,7 @@ const itemsData = [
     image: "http://dummyimage.com/242x100.png/dddddd/000000",
     category: "Shoes",
     outlet: false,
-    init: 1,
-    stock: 62,
+    stock: 12,
   },
   {
     id: 20,
@@ -242,8 +223,7 @@ const itemsData = [
     image: "http://dummyimage.com/141x100.png/5fa2dd/ffffff",
     category: "Accesories",
     outlet: false,
-    init: 1,
-    stock: 38,
+    stock: 28,
   },
 ];
 

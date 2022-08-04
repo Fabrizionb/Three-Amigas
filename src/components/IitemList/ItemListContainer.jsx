@@ -11,11 +11,10 @@ function getProductos() {
 function ItemListContainer(props) {
   const [data, setData] = useState([{}]);
 
-  function onAdd(amount) {
-    console.log(`You add ${amount} products`);
-    
+  function onAdd(count) {
+    alert("onAdd")
+    console.log(`You add ${count} products`);
   }
-
 
   useEffect(() => {
     getProductos().then((respuesta) => {
@@ -42,8 +41,8 @@ function ItemListContainer(props) {
                 image={item.image}
                 category={item.category}
                 description={item.description}
-                initial={item.init}
                 stock={item.stock}
+                onAdd={props.onAdd}
               />
             ))
 

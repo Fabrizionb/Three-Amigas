@@ -5,13 +5,17 @@ import Button from "../button/Button";
 function ItemCount(props) {
   let [count, setCount] = useState(1);
 
-  const handleIncrement = () =>
-    count >= props.initial && count < props.stock
-      ? setCount(count + 1)
-      : setCount(count + 0);
+  function handleIncrement() {
+    if (count >= 1 && count < props.stock) {
+      setCount(count + 1);
+    }
+  }
 
-  const handleDecrement = () =>
-    count > props.initial ? setCount(count - 1) : setCount(count - 0);
+  function handleDecrement() {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  }
 
   return (
     <div className='container mt-5 d-flex align-items-center justify-content-center '>
@@ -35,7 +39,7 @@ function ItemCount(props) {
             +
           </button>
         </div>
-        <Button text={"Add to Cart"} />
+        <Button onClick={( ) => props.onAdd( count ) } text={"Add to Cart"} />
       </div>
     </div>
   );
