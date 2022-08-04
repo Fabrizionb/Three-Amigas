@@ -8,26 +8,19 @@ import NavBar from "../../components/navBar/NavBar";
 import Banner from "../../components/banner/Banner";
 import Footer from "../../components/footer/Footer";
 
-
-
 import ItemListContainer from "../../components/IitemList/ItemListContainer";
 import PaymentListContainer from "../../components/paymentListContainer/PaymentListContainer";
 
 function App() {
-    
-
   return (
     <div className='App'>
       <NavBar />
 
       <Banner />
-      
-      
 
-      <PaymentListContainer  title="Payment Methods"/>
+      <PaymentListContainer title='Payment Methods' />
 
-      <ItemListContainer title="Flash Sale"/>
-
+      <ItemListContainer title='Flash Sale' />
 
       <Footer />
     </div>

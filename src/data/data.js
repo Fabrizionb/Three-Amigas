@@ -1,4 +1,4 @@
-const itemsData  = [
+const itemsData = [
   {
     id: 1,
     name: "Leather Boots",
@@ -17,7 +17,8 @@ const itemsData  = [
     price: 2800,
     description: "Unisex textile and rubber tennis",
     promotion: 2000,
-    image: "https://i.pinimg.com/736x/93/05/6d/93056d66214b41ffa856fdfffc536014.jpg",
+    image:
+      "https://i.pinimg.com/736x/93/05/6d/93056d66214b41ffa856fdfffc536014.jpg",
     category: "Shoes",
     outlet: true,
     init: 1,
@@ -29,7 +30,8 @@ const itemsData  = [
     price: 2762,
     description: "Comfortable high hill Shoes color Pink",
     promotion: 2012,
-    image: "https://i.pinimg.com/originals/0d/3b/c5/0d3bc51d305cbf1eb1d360e685d13e71.jpg",
+    image:
+      "https://i.pinimg.com/originals/0d/3b/c5/0d3bc51d305cbf1eb1d360e685d13e71.jpg",
     category: "Shoes",
     outlet: false,
     init: 1,
@@ -41,7 +43,8 @@ const itemsData  = [
     price: 1100,
     description: "100% rubber, summer flip flops for women",
     promotion: 1985,
-    image: "https://media1.popsugar-assets.com/files/thumbor/cgVrv6PPROBbqqAog-8xsCLK-M4/0x2100:4200x6300/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/06/07/718/n/1922564/a82581365cfa8d7b0a9481.08828189_/i/Best-Flip-Flops-Women-2019.jpg",
+    image:
+      "https://media1.popsugar-assets.com/files/thumbor/cgVrv6PPROBbqqAog-8xsCLK-M4/0x2100:4200x6300/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/06/07/718/n/1922564/a82581365cfa8d7b0a9481.08828189_/i/Best-Flip-Flops-Women-2019.jpg",
     category: "Shoes",
     outlet: false,
     init: 1,
@@ -53,7 +56,8 @@ const itemsData  = [
     price: 3000,
     description: "Women's strappy slide flat sandal",
     promotion: 2007,
-    image: "https://i5.walmartimages.com/asr/ccf7b933-5a5e-4c4c-b9f1-294960486c8f.a0dbed8c6bef34b8f88a9db4e1e328e7.jpeg",
+    image:
+      "https://i5.walmartimages.com/asr/ccf7b933-5a5e-4c4c-b9f1-294960486c8f.a0dbed8c6bef34b8f88a9db4e1e328e7.jpeg",
     category: "Shoes",
     outlet: true,
     init: 1,
@@ -65,7 +69,8 @@ const itemsData  = [
     price: 4000,
     description: "Quartz analog leather strap watch",
     promotion: 1994,
-    image: "https://ae01.alicdn.com/kf/Hf710508447bd4bdc9556c943052e8898u/Top-Style-Fashion-Women-s-Luxury-Leather-Band-Analog-Quartz-Wrist-Watch-Golden-Ladies-Watch-Women.jpg",
+    image:
+      "https://ae01.alicdn.com/kf/Hf710508447bd4bdc9556c943052e8898u/Top-Style-Fashion-Women-s-Luxury-Leather-Band-Analog-Quartz-Wrist-Watch-Golden-Ladies-Watch-Women.jpg",
     category: "Accesories",
     outlet: false,
     init: 1,
@@ -77,7 +82,8 @@ const itemsData  = [
     price: 3600,
     description: "Odessa cap apparel, deep wine, one size",
     promotion: 1993,
-    image: "https://i.pinimg.com/564x/41/61/9c/41619c6d130bf9591872d9bc4b3945e1.jpg",
+    image:
+      "https://i.pinimg.com/564x/41/61/9c/41619c6d130bf9591872d9bc4b3945e1.jpg",
     category: "Accesories",
     outlet: true,
     init: 1,
@@ -241,4 +247,4 @@ const itemsData  = [
   },
 ];
 
-export default itemsData;;
+export default itemsData;
