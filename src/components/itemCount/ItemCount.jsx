@@ -18,7 +18,7 @@ function ItemCount(props) {
   }
 
   return (
-    <div className='container mt-5 d-flex align-items-center justify-content-center '>
+    <div className='container mt-1 d-flex align-items-center justify-content-center '>
       <div className='row'>
         <div className='col'>
           <button

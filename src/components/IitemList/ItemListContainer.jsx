@@ -43,6 +43,7 @@ function ItemListContainer(props) {
                 stock={item.stock}
                 onAdd={onAdd}
                 count={item.count}
+                badge={item.badge}
               />
             ))
 

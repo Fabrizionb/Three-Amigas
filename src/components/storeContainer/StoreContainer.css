@@ -1,0 +1,21 @@
+.finder {
+    background-color: coral!important;
+}
+
+.finderr {
+    background-color: coral!important;
+    
+}
+
+.fa-star {
+    color: rgb(172, 172, 46)
+}
+
+
+li {
+    list-style:none
+}
+
+a {
+    text-decoration: none
+}
