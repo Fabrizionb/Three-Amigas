@@ -48,17 +48,17 @@ function NavBar() {
                 <ul className='dropdown-menu'>
                   <li>
                     <a className='dropdown-item' href='#'>
-                    <img src='../img/002-male-clothes.png'/> Cloth
+                      <img src='../img/002-male-clothes.png' /> Cloth
                     </a>
                   </li>
                   <li>
                     <a className='dropdown-item' href='#'>
-                    <img src='../img/007-sneakers.png'/> Shoes
+                      <img src='../img/007-sneakers.png' /> Shoes
                     </a>
                   </li>
                   <li>
                     <a className='dropdown-item' href='#'>
-                    <img src='../img/accesorios.png'/> Accessories
+                      <img src='../img/accesorios.png' /> Accessories
                     </a>
                   </li>
                   <li>
@@ -66,7 +66,7 @@ function NavBar() {
                   </li>
                   <li>
                     <a className='dropdown-item' href='#'>
-                    <img src='../img/descuento.png'/> Outlet
+                      <img src='../img/descuento.png' /> Outlet
                     </a>
                   </li>
                 </ul>
@@ -83,22 +83,22 @@ function NavBar() {
                 <ul className='dropdown-menu'>
                   <li>
                     <a className='dropdown-item' href='#'>
-                      <img src='../img/004-instagram.png'/> Instagram
+                      <img src='../img/004-instagram.png' /> Instagram
                     </a>
                   </li>
                   <li>
                     <a className='dropdown-item' href='#'>
-                    <img src='../img/003-facebook.png'/> Facebook
+                      <img src='../img/003-facebook.png' /> Facebook
                     </a>
                   </li>
                   <li>
                     <a className='dropdown-item' href='#'>
-                    <img src='../img/005-tik-tok.png'/> Tik Tok
+                      <img src='../img/005-tik-tok.png' /> Tik Tok
                     </a>
                   </li>
                   <li>
                     <a className='dropdown-item' href='#'>
-                    <img src='../img/006-whatsapp.png'/> Whats App
+                      <img src='../img/006-whatsapp.png' /> Whats App
                     </a>
                   </li>
                 </ul>

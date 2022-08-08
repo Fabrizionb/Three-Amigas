@@ -7,10 +7,13 @@ function ItemDetailContainer({ itemid }) {
 
   function getProduct() {
     return new Promise((resolve, reject) => {
-      resolve(dataJSON[0]);
+      resolve(dataJSON[3]);
     });
   }
 
+  function onAdd(count) {
+    console.log(`You add ${count} products`);
+  }
   useEffect(() => {
     getProduct()
       .then((respuesta) => {
@@ -28,15 +31,16 @@ function ItemDetailContainer({ itemid }) {
             <div className='card-detail'>
               <div className='row'>
                 {
-                 <ItemDetail
-                 name={data.name}
-                 price={data.price}
-                 description={data.description}
-                 image={data.image}
-                 category={data.category}
-                 stock={data.stock}
-                 id={data.id}
-               />
+                  <ItemDetail
+                    name={data.name}
+                    price={data.price}
+                    description={data.description}
+                    image={data.image}
+                    category={data.category}
+                    stock={data.stock}
+                    id={data.id}
+                    onAdd={onAdd}
+                  />
                 }
               </div>
             </div>

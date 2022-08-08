@@ -8,10 +8,11 @@ import NavBar from "../../components/navBar/NavBar";
 import Banner from "../../components/banner/Banner";
 import Footer from "../../components/footer/Footer";
 
-import ItemListContainer from "../../components/IitemList/ItemListContainer";
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import StoreContainer from "../../components/storeContainer/StoreContainer";
 import PaymentListContainer from "../../components/paymentListContainer/PaymentListContainer";
-import ItemDetailContainer from "../itemDetail/ItemDetailContainer";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+
 
 function App() {
   return (
@@ -22,14 +23,23 @@ function App() {
 
       <PaymentListContainer title='Payment Methods' />
 
+
+
+
+      
+
+
+
       <ItemListContainer title='Outlet Sale' />
 
-      <ItemDetailContainer  itemid={2} /> 
 
+
+
+
+
+      <ItemDetailContainer />
+      {/*    */}
       <Footer />
-
-      {/* <StoreContainer /> */}
-      
     </div>
   );
 }

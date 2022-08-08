@@ -18,9 +18,9 @@ function ItemCount(props) {
   }
 
   return (
-    <div className='container mt-1 d-flex align-items-center justify-content-center '>
+    <div className='container mt-1 d-flex align-items-center justify-content-center countContainer'>
       <div className='row'>
-        <div className='col'>
+        <div className='col d-flex justify-content-center mb-1'>
           <button
             onClick={handleDecrement}
             className='btn  btn-sm itemCount'
@@ -28,13 +28,13 @@ function ItemCount(props) {
             -
           </button>
         </div>
-        <div className='col textDiv'>
+        <div className='col textDiv d-flex justify-content-center'>
           <p className='textCount text-center'>{count}</p>
         </div>
-        <div className='col'>
+        <div className='col  d-flex justify-content-center mb-1'>
           <button
             onClick={handleIncrement}
-            className='btn  btn-sm itemCount'
+            className='btn  btn-sm itemCount '
             id='plus-btn'>
             +
           </button>

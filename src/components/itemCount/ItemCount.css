@@ -69,3 +69,7 @@
   border-bottom-right-radius: 16px;
   }
   }
+
+  .countContainer {
+    min-width: 100%;
+  }

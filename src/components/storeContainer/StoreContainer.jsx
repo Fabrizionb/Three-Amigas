@@ -4,9 +4,9 @@ import "./StoreContainer.css";
 
 const StoreContainer = () => {
   return (
-    <div class='container '>
-      <div class='row justify-content-center d-flex align-items-center justify-content-center'>
-        <div class='col-md-3 '>
+    <div className='container '>
+      <div className='row justify-content-center d-flex align-items-center justify-content-center'>
+        <div className='col-md-3 '>
           <div className='col-md-6 col-lg-12 mb-5'>
             {/* <!-- Panel --> */}
             <h5 className='font-weight-bold dark-grey-text'>
@@ -38,10 +38,9 @@ const StoreContainer = () => {
                 name='group100'
                 type='radio'
                 id='radio100'
+                defaultChecked={this}
               />
-              <label
-                for='radio100'
-                className='form-check-label dark-grey-text'>
+              <label for='radio100' className='form-check-label dark-grey-text'>
                 All
               </label>{" "}
             </div>
@@ -54,9 +53,7 @@ const StoreContainer = () => {
                 id='radio101'
                 checked
               />{" "}
-              <label
-                for='radio101'
-                className='form-check-label dark-grey-text'>
+              <label for='radio101' className='form-check-label dark-grey-text'>
                 Clothes
               </label>{" "}
             </div>
@@ -68,9 +65,7 @@ const StoreContainer = () => {
                 type='radio'
                 id='radio102'
               />
-              <label
-                for='radio102'
-                className='form-check-label dark-grey-text'>
+              <label for='radio102' className='form-check-label dark-grey-text'>
                 Shoes
               </label>{" "}
             </div>
@@ -82,9 +77,7 @@ const StoreContainer = () => {
                 type='radio'
                 id='radio103'
               />
-              <label
-                for='radio103'
-                className='form-check-label dark-grey-text'>
+              <label for='radio103' className='form-check-label dark-grey-text'>
                 Accesories
               </label>{" "}
             </div>
@@ -96,9 +89,7 @@ const StoreContainer = () => {
                 type='radio'
                 id='radio104'
               />
-              <label
-                for='radio103'
-                className='form-check-label dark-grey-text'>
+              <label for='radio103' className='form-check-label dark-grey-text'>
                 Outlet
               </label>{" "}
             </div>
@@ -107,11 +98,9 @@ const StoreContainer = () => {
           </div>
         </div>
 
-        <div class='col-md-9 d-flex mt-5 d-grid  row '>
-
-
+        <div className='col-md-9 d-flex mt-5 d-grid  row ada'>
           {/*<!-- Grid column --> */}
-          <div className='col-lg-4 col-md-12 mb-3'>
+          <div className='col-lg-4 col-md-12 mb-3 ide'>
             {/*<!-- Card --> */}
             <div className='card card-ecommerce'>
               {/*<!-- Card image --> */}
@@ -181,10 +170,6 @@ const StoreContainer = () => {
             {/*<!-- Card --> */}
           </div>
           {/*<!-- Grid column --> */}
-
-
-
-
         </div>
       </div>
     </div>

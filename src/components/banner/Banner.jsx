@@ -2,7 +2,6 @@ import React from "react";
 import "../banner/Banner.css";
 
 function Banner() {
-
   const arrayBanner = [
     {
       img: "../../../img/banner.png",

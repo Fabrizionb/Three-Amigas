@@ -1,6 +1,6 @@
 import "../payment/Payment.css";
 
-function Payment({name, id, img, description}) {
+function Payment({ name, id, img, description }) {
   return (
     <>
       <div className='col-3 text-center'>
