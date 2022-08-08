@@ -9,7 +9,7 @@ function Card({
   description,
   stock,
   onAdd,
-  count,
+  
 }) {
   return (
     <>
@@ -35,7 +35,7 @@ function Card({
           </h5>
           <p>Category: {category}</p>
           <span className='badge badge-danger mb-2'>Stock: {stock}</span>
-          <p>contador: {count}</p>
+          <p>contador: </p>
           {/*<!-- Rating --> */}
           <ul className='rating d-flex'>
             <p>Rating: </p>
@@ -63,7 +63,7 @@ function Card({
                 Price: <strong>{price}$</strong>
               </span>
 
-              <ItemCount onAdd={onAdd} count={count} stock={stock} />
+              <ItemCount onAdd={onAdd} stock={stock} />
             </div>
           </div>
         </div>

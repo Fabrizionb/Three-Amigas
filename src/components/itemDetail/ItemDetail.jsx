@@ -40,13 +40,13 @@ function ItemDetail({
           </div>
           <div className='carousel-inner'>
             <div className='carousel-item active'>
-              <img src={image} className='d-block w-100 rounded' alt='...' />
+              <img src={image} className='d-block w-100 rounded' alt={"Image of product " + {name}+ " " + {description} +" " +" with id number " + {id} } />
             </div>
             <div className='carousel-item'>
-              <img src={image} className='d-block w-100 rounded' alt='...' />
+              <img src={image} className='d-block w-100 rounded' alt={"Image of product " + {name}+ " " + {description} +" " +" with id number " + {id} } />
             </div>
             <div className='carousel-item'>
-              <img src={image} className='d-block w-100 rounded' alt='...' />
+              <img src={image} className='d-block w-100 rounded' alt={"Image of product " + {name}+ " " + {description} +" " +" with id number " + {id} } />
             </div>
           </div>
           <button

@@ -6,6 +6,10 @@ function ItemList({ data }) {
     return obj.outlet === true;
   });
 
+  function onAdd( count ) {
+    console.log(`You add ${count} products`);
+  }
+
   return (
     <>
       <h4 className='text-center mt-5 flashTitle'>Outlet Sale</h4>
@@ -20,10 +24,9 @@ function ItemList({ data }) {
                 image={item.image}
                 category={item.category}
                 description={item.description}
-                stock={item.stock}
                 count={item.count}
-                badge={item.badge}
-                onAdd={item.onAdd}
+                stock={item.stock}
+                onAdd={onAdd}
               />
             ))
 

@@ -8,12 +8,8 @@ function getProductos() {
   });
 }
 
-function ItemListContainer(props) {
+function ItemListContainer({ props }) {
   const [data, setData] = useState([]);
-
-  function onAdd({ count }) {
-    console.log(`You add ${count} products`);
-  }
 
   useEffect(() => {
     getProductos().then((respuesta) => {
@@ -23,7 +19,7 @@ function ItemListContainer(props) {
 
   return (
     <>
-      <ItemList title={"Outlet Sale"} data={data} onAdd={onAdd} />
+      <ItemList title={"Outlet Sale"} data={data} />
     </>
   );
 }
