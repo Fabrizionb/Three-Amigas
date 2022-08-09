@@ -15,29 +15,37 @@
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  
 }
 
 .card:hover {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.35);
   transition: all 0.3s ease-in-out;
-  transform: scale(1.03)
+  transform: scale(1.03);
 }
 
 .card-detail {
   padding: 12px 8px;
-} */
-
- .card-img-top{
-   /* width:100%;  */
+}
+*/ .card-img-top {
+  /* width:100%;  */
   height: 100%;
 }
 
-.card-body{
-  background-color: #ffffff
+.card-body {
+  background-color: #ffffff;
 }
 
-.img-car{
+.img-car {
   max-height: 264px;
 }
 
+.f{
+  max-width: 50%;
+}
+
+.card {
+  flex-basis: 30%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+}

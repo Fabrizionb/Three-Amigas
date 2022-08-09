@@ -55,7 +55,7 @@ const itemsData = [
     image:
       "https://i5.walmartimages.com/asr/ccf7b933-5a5e-4c4c-b9f1-294960486c8f.a0dbed8c6bef34b8f88a9db4e1e328e7.jpeg",
     category: "Shoes",
-    outlet: true,
+    outlet: false,
     stock: 15,
   },
   {

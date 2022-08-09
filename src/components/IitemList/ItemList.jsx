@@ -6,15 +6,15 @@ function ItemList({ data }) {
     return obj.outlet === true;
   });
 
-  function onAdd( count ) {
+  function onAdd(count) {
     console.log(`You add ${count} products`);
   }
 
   return (
     <>
       <h4 className='text-center mt-5 flashTitle'>Outlet Sale</h4>
-      <div className='container d-flex align-items-center justify-content-center mt-3'>
-        <div className='row text-center  align-items-stretch'>
+      <div className='container d-flex align-items-center justify-content-center mt-1'>
+        <div className='row text-center  '>
           {
             outlet.map((item) => (
               <Card

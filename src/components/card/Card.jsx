@@ -1,20 +1,11 @@
 import ItemCount from "../itemCount/ItemCount";
 import "./Card.css";
 
-function Card({
-  name,
-  price,
-  image,
-  category,
-  description,
-  stock,
-  onAdd,
-  
-}) {
+function Card({ name, price, image, category, description, stock, onAdd }) {
   return (
     <>
       {/*<!-- Card --> */}
-      <div className='card card-ecommerce'>
+      <div className='card card-ecommerce f col-4'>
         {/*<!-- Card image --> */}
         <div className='view overlay'>
           <img src={image} className='img-fluid img-car' alt={description} />
@@ -34,31 +25,12 @@ function Card({
             </strong>
           </h5>
           <p>Category: {category}</p>
-          <span className='badge badge-danger mb-2'>Stock: {stock}</span>
-          <p>contador: </p>
+          <span className='badge badge-danger mb-1'>Stock: {stock}</span>
           {/*<!-- Rating --> */}
-          <ul className='rating d-flex'>
-            <p>Rating: </p>
-            <li>
-              <i className='fas fa-star blue-text'></i>
-            </li>
-            <li>
-              <i className='fas fa-star blue-text'></i>
-            </li>
-            <li>
-              <i className='fas fa-star blue-text'></i>
-            </li>
-            <li>
-              <i className='fas fa-star blue-text'></i>
-            </li>
-            <li>
-              <i className='fas fa-star grey-text'></i>
-            </li>
-          </ul>
           <p>Description: {description}</p>
           {/* <!-- Card footer --> */}
           <div className='card-footer pb-0 '>
-            <div className='row mb-0 text-center ff'>
+            <div className='row mb-0 text-center'>
               <span className='float-left mb-1'>
                 Price: <strong>{price}$</strong>
               </span>

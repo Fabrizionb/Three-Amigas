@@ -6,7 +6,7 @@ function PaymentListContainer(props) {
   return (
     <>
       <h4 className='text-center mt-5 paymentTitle'>{props.title}</h4>
-      <div div className='row payment-data-container container mt-3'>
+      <div className='row payment-data-container container mt-3'>
         <div className='row payment'>
           {paymentArray.map((item) => (
             <Payment

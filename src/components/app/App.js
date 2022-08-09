@@ -4,44 +4,25 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 // Imports Components
-import NavBar from "../../components/navBar/NavBar";
-import Banner from "../../components/banner/Banner";
-import Footer from "../../components/footer/Footer";
 
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
-import StoreContainer from "../../components/storeContainer/StoreContainer";
-import PaymentListContainer from "../../components/paymentListContainer/PaymentListContainer";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
-
+import Home from "../Views/Home";
+import Store from "../Views/Store";
 
 function App() {
   return (
     <div className='App'>
-      <NavBar />
+      <Home />
+      <p className='text-center mt-5 mb-5'>Fin de Home View</p>
+      <hr></hr>
 
-      <Banner />
-
-      <PaymentListContainer title='Payment Methods' />
-
-
-
-
-      
-
-
-
-      <ItemListContainer title='Outlet Sale' />
-
-
-
-
-
-
-      <ItemDetailContainer />
-      {/*    */}
-      <Footer />
+      <Store />
+      <p className='text-center mt-5 mb-5'>Fin de Store View</p>
+      <hr></hr>
     </div>
   );
 }
 
 export default App;
+{
+  /* <ItemDetailContainer /> */
+}
