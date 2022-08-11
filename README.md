@@ -79,6 +79,6 @@ Contact
 
 * * *
 
-*[Linkedin](https://www.linkedin.com/in/fabrizio-bertolo/)
-*[GitHub](https://github.com/Fabrizionb/Proyecto-Coderhouse-React)
+[Linkedin](https://www.linkedin.com/in/fabrizio-bertolo/)
+& [GitHub](https://github.com/Fabrizionb/Proyecto-Coderhouse-React)
 
