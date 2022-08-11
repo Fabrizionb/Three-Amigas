@@ -6,7 +6,7 @@ import BlogContainer from "../BlogContainer/BlogContainer";
 const Home = () => {
   return (
     <>
-    <Banner />
+      <Banner />
       <PaymentListContainer title='Payment Methods' />
       <BlogContainer title='Fashion Tips' />
     </>

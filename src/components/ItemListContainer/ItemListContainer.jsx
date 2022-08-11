@@ -10,32 +10,37 @@ function getProductos() {
   });
 }
 
-function ItemListContainer() {
+function ItemListContainer(props) {
+  const [title, setTitle] = useState("");
   const [data, setData] = useState([]);
   const idCategory = useParams().idCategory;
-
+  
   useEffect(() => {
     getProductos().then((respuesta) => {
       let filters = respuesta.filter(
         (element) => element.category == idCategory
       );
-      let outlet = respuesta.filter(
-        (element) => element.outlet == true
-      );
-
+      let outlet = respuesta.filter((element) => element.outlet == true);
 
       if (idCategory === undefined) {
         setData(respuesta);
-      } else if (idCategory == "outlet"){
+        setTitle("All our Products");
+        
+      } else if (idCategory == "outlet") {
         setData(outlet);
-      }else {
+        setTitle("Our Outlet Products");
+        
+      } else {
         setData(filters);
+        
+        setTitle("Our " + filters[0].category + " " + "Products")
       }
     });
   }, []);
 
   return (
     <>
+      <h4 className='text-center mt-5 paymentTitle'>{title}</h4>
       <ItemList data={data} />;
     </>
   );

@@ -10,7 +10,7 @@ function ItemList({ data }) {
   return (
     <>
       <div className='container '>
-        <div className='row  d-flex mt-5 d-flex flex-wrap align-items-start '>
+        <div className='row  d-flex mt-1 d-flex flex-wrap align-items-start '>
           <div className='col-md-2 '>
             <div className='col-md-6 col-lg-12 mb-5'>
               {/* <!-- Panel --> */}
@@ -39,6 +39,38 @@ function ItemList({ data }) {
 
               <ul>
                 <li className='nav-item'>
+                  <Link className='nav-link' to={"/store"}>
+                    All
+                  </Link>
+                </li>
+
+                <li className='nav-item'>
+                  <Link className='nav-link' to={"/store/jeans"}>
+                    Jeans
+                  </Link>
+                </li>
+
+                <li className='nav-item'>
+                  <Link className='nav-link' to={"/store/dresses"}>
+                    Dresses
+                  </Link>
+                </li>
+
+                <li className='nav-item'>
+                  <Link className='nav-link' to={"/store/tops"}>
+                    Tops
+                  </Link>
+                </li>
+
+                <li className='nav-item'>
+                  <Link className='nav-link' to={"/store/outlet"}>
+                    Outlet
+                  </Link>
+                </li>
+              </ul>
+
+              {/* <ul>
+                <li className='nav-item'>
                   <NavLink
                     className='nav-link'
                     to={"/store"}
@@ -50,7 +82,7 @@ function ItemList({ data }) {
                 </li>
 
                 <li className='nav-item'>
-                  <NavLink 
+                  <NavLink
                     className='nav-link'
                     to={"/store/jeans/"}
                     style={({ isActive }) =>
@@ -92,7 +124,7 @@ function ItemList({ data }) {
                     Outlet
                   </NavLink>
                 </li>
-              </ul>
+              </ul> */}
 
               {/* <!-- Radio group --> */}
             </div>

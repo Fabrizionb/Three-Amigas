@@ -7,10 +7,9 @@ import ItemListContainer from "../ItemListContainer/ItemListContainer";
 function Store() {
   return (
     <>
-     <Banner />
+      <Banner />
       <PaymentListContainer title='Payment Methods' />
-
-      <ItemListContainer />
+      <ItemListContainer title='Payment Methods'/>
     </>
   );
 }

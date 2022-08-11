@@ -116,7 +116,7 @@ const itemsData = [
   },
   {
     id: 8,
-    name: "DRESS HATTAN",
+    name: "DRESS HATA",
     price: 3200,
     description:
       "Plain morley midi dress with 7/8 sleeves and boat neckline. It has a cut on the sides.",
