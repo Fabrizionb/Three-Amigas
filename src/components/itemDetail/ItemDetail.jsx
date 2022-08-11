@@ -1,11 +1,13 @@
 import React from "react";
 import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetail.css";
-
+import { Link } from "react-router-dom";
 function ItemDetail({
   name,
   price,
   image,
+  imageTwo,
+  imageThree,
   category,
   description,
   stock,
@@ -40,13 +42,13 @@ function ItemDetail({
           </div>
           <div className='carousel-inner'>
             <div className='carousel-item active'>
-              <img src={image} className='d-block w-100 rounded' alt={"Image of product " + {name}+ " " + {description} +" " +" with id number " + {id} } />
+              <img src={image} className='d-block w-100 rounded' alt={id} />
             </div>
             <div className='carousel-item'>
-              <img src={image} className='d-block w-100 rounded' alt={"Image of product " + {name}+ " " + {description} +" " +" with id number " + {id} } />
+              <img src={imageTwo} className='d-block w-100 rounded' alt={id} />
             </div>
             <div className='carousel-item'>
-              <img src={image} className='d-block w-100 rounded' alt={"Image of product " + {name}+ " " + {description} +" " +" with id number " + {id} } />
+              <img src={imageThree} className='d-block w-100 rounded' alt={id} />
             </div>
           </div>
           <button
@@ -76,8 +78,9 @@ function ItemDetail({
         <div className='product p-4'>
           <div className='d-flex justify-content-between align-items-center'>
             <div className='d-flex align-items-center'>
+              <Link  to={`/store/${category}`}>
               <i className='fa fa-long-arrow-left'></i>
-              <span className='ml-1'>Back</span>
+              <span className='ml-1'>Back</span></Link>
             </div>
           </div>
 
@@ -94,6 +97,7 @@ function ItemDetail({
               Price:
               <span className='act-price '> ${price}</span>
             </h5>
+            
           </div>
           <div className='ml-2 text-center'>
             <p className='about'>

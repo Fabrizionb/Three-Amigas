@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import itemsData from "../../data/data.js";
-import StoreList from "../StoreList/StoreList";
-import "./StoreContainer.css";
-
+import itemsData from "../../src/data/data.js";
+import ItemList from "../IitemList/ItemList";
 
 function getProductos() {
   return new Promise((resolve) => {
@@ -10,7 +8,7 @@ function getProductos() {
   });
 }
 
-function StoreContainer({ props }) {
+function ItemListContainer({ props }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -21,9 +19,9 @@ function StoreContainer({ props }) {
 
   return (
     <>
-     <StoreList title={"Outlet Sale"} data={data} />;
+      <ItemList title={"Outlet Sale"} data={data} />
     </>
   );
 }
 
-export default StoreContainer;
+export default ItemListContainer;

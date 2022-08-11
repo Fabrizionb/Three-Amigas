@@ -1,5 +1,9 @@
 // Imports Css
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "../../components/navBar/NavBar";
 
+import Footer from "../../components/footer/Footer";
+import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetailContainer";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
@@ -11,18 +15,30 @@ import Store from "../Views/Store";
 function App() {
   return (
     <div className='App'>
-      <Home />
-      <p className='text-center mt-5 mb-5'>Fin de Home View</p>
-      <hr></hr>
+      <BrowserRouter>
+        <NavBar />
+        
 
-      <Store />
-      <p className='text-center mt-5 mb-5'>Fin de Store View</p>
-      <hr></hr>
+        <Routes>
+          <Route path='/' element={<Home />} />
+
+          <Route path='/detalle' element={<ItemDetailContainer />} />
+          <Route path='/detalle/:id' element={<ItemDetailContainer />} />
+
+          <Route  path='/store' element={<Store />} />
+          <Route  path='/store/:idCategory' element={<Store />} />
+          <Route
+            path='*'
+            element={
+              <h1 className='text-center mt-5 mb-5'>Product not found</h1>
+            }
+          />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
-{
-  /* <ItemDetailContainer /> */
-}

@@ -22,11 +22,14 @@ function ItemList({ data }) {
                 name={item.name}
                 price={item.price}
                 image={item.image}
+                imageTwo={item.imageTwo}
+                imageThree={item.imageThree}
                 category={item.category}
                 description={item.description}
                 count={item.count}
                 stock={item.stock}
                 onAdd={onAdd}
+                id={item.id}
               />
             ))
 

@@ -1,26 +1,33 @@
 import React, { useEffect, useState } from "react";
-import dataJSON from "../../data/data.js";
+import { useParams } from "react-router-dom";
+import data from "../../data/data.js";
 import ItemDetail from "../itemDetail/ItemDetail";
 
-function ItemDetailContainer({ itemid }) {
-  const [data, setData] = useState({});
+function getProductos() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(data), 500);
+  });
+}
 
-  function getProduct() {
-    return new Promise((resolve, reject) => {
-      resolve(dataJSON[3]);
+function ItemDetailContainer() {
+  const idUrl = useParams().id;
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getProductos().then((respuesta) => {
+      let find = respuesta.find((element) => element.id == idUrl);
+
+      if (find !== undefined) {
+        setData(find);
+      } else {
+        alert("Product not found");
+      }
     });
-  }
+  }, []);
 
   function onAdd(count) {
     console.log(`You add ${count} products`);
   }
-  useEffect(() => {
-    getProduct()
-      .then((respuesta) => {
-        setData(respuesta);
-      })
-      .catch((error) => console.log(error));
-  }, []);
 
   return (
     <>
@@ -36,6 +43,8 @@ function ItemDetailContainer({ itemid }) {
                     price={data.price}
                     description={data.description}
                     image={data.image}
+                    imageTwo={data.imageTwo}
+                    imageThree={data.imageThree}
                     category={data.category}
                     stock={data.stock}
                     id={data.id}

@@ -1,25 +1,42 @@
 import React, { useEffect, useState } from "react";
-import itemsData from "../../data/data.js";
-import ItemList from "../IitemList/ItemList";
+import data from "../../data/data.js";
+import ItemList from "../ItemList/ItemList";
+import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
 
 function getProductos() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(itemsData), 500);
+    setTimeout(() => resolve(data), 500);
   });
 }
 
-function ItemListContainer({ props }) {
+function ItemListContainer() {
   const [data, setData] = useState([]);
+  const idCategory = useParams().idCategory;
 
   useEffect(() => {
     getProductos().then((respuesta) => {
-      setData(respuesta);
+      let filters = respuesta.filter(
+        (element) => element.category == idCategory
+      );
+      let outlet = respuesta.filter(
+        (element) => element.outlet == true
+      );
+
+
+      if (idCategory === undefined) {
+        setData(respuesta);
+      } else if (idCategory == "outlet"){
+        setData(outlet);
+      }else {
+        setData(filters);
+      }
     });
   }, []);
 
   return (
     <>
-      <ItemList title={"Outlet Sale"} data={data} />
+      <ItemList data={data} />;
     </>
   );
 }

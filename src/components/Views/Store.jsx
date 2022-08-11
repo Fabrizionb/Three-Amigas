@@ -1,20 +1,18 @@
 import React from "react";
+import "../card/Card.css";
 import Banner from "../../components/banner/Banner";
-import NavBar from "../../components/navBar/NavBar";
-import Footer from "../../components/footer/Footer";
 import PaymentListContainer from "../../components/paymentListContainer/PaymentListContainer";
-import StoreContainer from "../storeContainer/StoreContainer";
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
-const Store = () => {
+function Store() {
   return (
     <>
-      <NavBar />
-      <Banner />
+     <Banner />
       <PaymentListContainer title='Payment Methods' />
-      <StoreContainer />
-      <Footer />
+
+      <ItemListContainer />
     </>
   );
-};
+}
 
 export default Store;
