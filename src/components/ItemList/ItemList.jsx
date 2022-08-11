@@ -50,7 +50,7 @@ function ItemList({ data }) {
                 </li>
 
                 <li className='nav-item'>
-                  <NavLink onClick={this.toggle}
+                  <NavLink 
                     className='nav-link'
                     to={"/store/jeans/"}
                     style={({ isActive }) =>
