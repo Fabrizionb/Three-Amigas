@@ -1,49 +1,82 @@
-<!-- # Getting Started with Create React App
+13 Reason to Buy
+================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* * *
 
-## Available Scripts
+A clothing Ecommerce App, built with React, JavaScript, Bootstrap and CSS.
 
-In the project directory, you can run:
+General Information
+-------------------
 
-### `npm start`
+* * *
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   13 Reasons to Buy is part of the final project of the ReactJs training at CoderHouse
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Technologies Used
+-----------------
 
-### `npm test`
+* * *
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*   HTML
 
-### `npm run build`
+*   JavaScript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*   React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*   NodeJS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*   Bootstrap 5
 
-### `npm run eject` 
+*   CSS
 
-# 
-## _Proyecto CoderHouse ReactJs_
-# (En construcción)
-#
-#
+Screenshots
+-----------
 
+* * *
 
+![](https://res.cloudinary.com/dm01fzgtk/image/upload/v1660231773/proyecto%20coderhouse%20react/screencapture-localhost-3000-2022-08-11-12_28_38_xvin1v.png)
 
+![](https://res.cloudinary.com/dm01fzgtk/image/upload/v1660231773/proyecto%20coderhouse%20react/screencapture-localhost-3000-store-2022-08-11-12_28_13_dkvmid.png)
 
-### Ver [Demo](https://fabrizionb.github.io/Proyecto-Coderhouse-React/) del sitio.
-#
-##
-###
-##
-#
-#-->
+Setup
+-----
+
+* * *
+
+Node Package Manager (NPM) & ReactJs
+
+##### Steps
+
+*   Clone down this repository. You will need `node` and `npm` installed globally on your machine. Installation: `npm install` To Run Test Suite: `npm test` To Start Server: `npm start` To Visit App: `localhost:3000`
+
+Project Status
+--------------
+
+* * *
+
+13 Reasons to Buy is still in progress. Upgrades will be out soon.
+
+Features that can be added
+--------------------------
+
+* * *
+
+*   Make Cards in Store responsive.
+
+*   Add Cart section.
+
+*   Add Checkout section.
+
+Acknowledgement
+---------------
+
+* * *
+
+*   This project was inspired by
+
+Contact
+-------
+
+* * *
+
+[![](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/fabrizio-bertolo/)[![](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg)](https://github.com/Fabrizionb/Proyecto-Coderhouse-React)
