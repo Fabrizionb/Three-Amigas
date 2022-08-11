@@ -56,7 +56,7 @@ Project Status
 
 13 Reasons to Buy is still in progress. Upgrades will be out soon.
 
-Features that can be added
+Features to be added
 --------------------------
 
 * * *
