@@ -79,4 +79,6 @@ Contact
 
 * * *
 
-[![](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/fabrizio-bertolo/)[![](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg)](https://github.com/Fabrizionb/Proyecto-Coderhouse-React)
+[Linkedin](https://www.linkedin.com/in/fabrizio-bertolo/)
+[GitHub](https://github.com/Fabrizionb/Proyecto-Coderhouse-React)
+
