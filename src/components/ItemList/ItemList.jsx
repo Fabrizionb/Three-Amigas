@@ -1,8 +1,10 @@
 import React from "react";
 import Card from "../card/Card";
 import { Link, NavLink } from "react-router-dom";
+import { Button } from "bootstrap";
+import "./ItemList.css";
 
-function ItemList({ data }) {
+function ItemList({ data, sortMinus, sortPlus }) {
   function onAdd(count) {
     console.log(`You add ${count} products`);
   }
@@ -14,19 +16,24 @@ function ItemList({ data }) {
           <div className='col-md-2 '>
             <div className='col-md-6 col-lg-12 mb-5'>
               {/* <!-- Panel --> */}
+
               <h5 className='font-weight-bold dark-grey-text'>
                 <strong>Order By</strong>
               </h5>
 
               <div className='divider'></div>
-
-              <p className='dark-grey-text'>
-                <a>Price: low to high</a>
+              
+              <p onClick={()=>sortMinus()} className='dark-grey-text sort'>
+                Price: low to high
               </p>
-
-              <p className='dark-grey-text'>
-                <a>Price: high to low</a>
+              
+            
+                    
+                   
+              <p onClick={()=>sortPlus()} className='dark-grey-text sort'>
+                Price: high to low
               </p>
+             
             </div>
 
             {/* <!-- Filter by category --> */}
@@ -38,38 +45,6 @@ function ItemList({ data }) {
               {/* <!-- Radio group --> */}
 
               <ul>
-                <li className='nav-item'>
-                  <Link className='nav-link' to={"/store"}>
-                    All
-                  </Link>
-                </li>
-
-                <li className='nav-item'>
-                  <Link className='nav-link' to={"/store/jeans"}>
-                    Jeans
-                  </Link>
-                </li>
-
-                <li className='nav-item'>
-                  <Link className='nav-link' to={"/store/dresses"}>
-                    Dresses
-                  </Link>
-                </li>
-
-                <li className='nav-item'>
-                  <Link className='nav-link' to={"/store/tops"}>
-                    Tops
-                  </Link>
-                </li>
-
-                <li className='nav-item'>
-                  <Link className='nav-link' to={"/store/outlet"}>
-                    Outlet
-                  </Link>
-                </li>
-              </ul>
-
-              {/* <ul>
                 <li className='nav-item'>
                   <NavLink
                     className='nav-link'
@@ -124,7 +99,7 @@ function ItemList({ data }) {
                     Outlet
                   </NavLink>
                 </li>
-              </ul> */}
+              </ul>
 
               {/* <!-- Radio group --> */}
             </div>
