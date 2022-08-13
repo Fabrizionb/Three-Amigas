@@ -10,12 +10,12 @@ function getProductos() {
 }
 
 function ItemDetailContainer() {
-  const idUrl = useParams().id;
+  const idUrl = Number(useParams().id);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     getProductos().then((respuesta) => {
-      let find = respuesta.find((element) => element.id == idUrl);
+      let find = respuesta.find((element) => element.id === idUrl);
 
       if (find !== undefined) {
         setData(find);
@@ -23,7 +23,7 @@ function ItemDetailContainer() {
         alert("Product not found");
       }
     });
-  }, []);
+  });
 
   function onAdd(count) {
     console.log(`You add ${count} products`);
@@ -31,7 +31,7 @@ function ItemDetailContainer() {
 
   return (
     <>
-      <h4 className='text-center mt-5 flashTitle'></h4>
+      <h4 className='text-center mt-5 flashTitle'>Product Detail</h4>
       <div className='container mt-5 mb-5'>
         <div className='row d-flex justify-content-center'>
           <div className='col-md-10'>

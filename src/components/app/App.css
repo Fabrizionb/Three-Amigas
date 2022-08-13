@@ -1,37 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 :root {
-    --background-first-color:#e9ecef;
-    --background-second-color:#ffffff;
-    --background-third-color:#777777;
+  --background-first-color: #e9ecef;
+  --background-second-color: #ffffff;
+  --background-third-color: #777777;
 
-    --first-color: #1C73BE;
-    --second-color: #66A6F7;
-    --third-color: #DEF2FF;
-    --fourth-color: #DBA11C;
-    
-    --first-font-color: black;
-    --second-font-color: #fff;
+  --first-color: #1c73be;
+  --second-color: #66a6f7;
+  --third-color: #def2ff;
+  --fourth-color: #dba11c;
+
+  --first-font-color: black;
+  --second-font-color: #fff;
 }
 
 *,
 html,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    max-width: 100%;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
 }
 
-
-body    {
-  background-color: var(--background-first-color)
+body {
+  background-color: var(--background-first-color);
 }
 
-.flashTitle, .paymentTitle {
-  color:var(--first-color);
+.flashTitle,
+.paymentTitle {
+  color: var(--first-color);
 }

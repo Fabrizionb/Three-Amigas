@@ -9,9 +9,7 @@ function Card({ name, price, image, category, description, stock, onAdd, id }) {
         {/*<!-- Card image --> */}
         <div className='view overlay'>
           <img src={image} className='img-fluid img-car' alt={description} />
-          <a>
-            <div className='mask rgba-white-slight waves-effect waves-light'></div>
-          </a>
+          <div className='mask rgba-white-slight waves-effect waves-light'></div>
         </div>
         {/*<!-- Card image --> */}
         {/* <!-- Card content --> */}

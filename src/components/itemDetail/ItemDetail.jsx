@@ -48,7 +48,11 @@ function ItemDetail({
               <img src={imageTwo} className='d-block w-100 rounded' alt={id} />
             </div>
             <div className='carousel-item'>
-              <img src={imageThree} className='d-block w-100 rounded' alt={id} />
+              <img
+                src={imageThree}
+                className='d-block w-100 rounded'
+                alt={id}
+              />
             </div>
           </div>
           <button
@@ -78,9 +82,10 @@ function ItemDetail({
         <div className='product p-4'>
           <div className='d-flex justify-content-between align-items-center'>
             <div className='d-flex align-items-center'>
-              <Link  to={`/store/${category}`}>
-              <i className='fa fa-long-arrow-left'></i>
-              <span className='ml-1'>Back</span></Link>
+              <Link to={`/store/${category}`}>
+                <i className='fa fa-long-arrow-left'></i>
+                <span className='ml-1'>Back</span>
+              </Link>
             </div>
           </div>
 
@@ -97,7 +102,6 @@ function ItemDetail({
               Price:
               <span className='act-price '> ${price}</span>
             </h5>
-            
           </div>
           <div className='ml-2 text-center'>
             <p className='about'>

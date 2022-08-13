@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "../card/Card";
-import { Link, NavLink } from "react-router-dom";
-import { Button } from "bootstrap";
+import { NavLink } from "react-router-dom";
 import "./ItemList.css";
 
 function ItemList({ data, sortMinus, sortPlus }) {
@@ -22,18 +21,14 @@ function ItemList({ data, sortMinus, sortPlus }) {
               </h5>
 
               <div className='divider'></div>
-              
-              <p onClick={()=>sortMinus()} className='dark-grey-text sort'>
+
+              <p onClick={() => sortMinus()} className='dark-grey-text sort'>
                 Price: low to high
               </p>
-              
-            
-                    
-                   
-              <p onClick={()=>sortPlus()} className='dark-grey-text sort'>
+
+              <p onClick={() => sortPlus()} className='dark-grey-text sort'>
                 Price: high to low
               </p>
-             
             </div>
 
             {/* <!-- Filter by category --> */}

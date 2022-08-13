@@ -11,6 +11,7 @@ import "./App.css";
 
 import Home from "../Views/Home";
 import Store from "../Views/Store";
+import Cart from "../Views/Cart";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/detalle/:id' element={<ItemDetailContainer />} />
           <Route path='/store' element={<Store />} />
           <Route path='/store/:idCategory' element={<Store />} />
+          <Route path='/cart' element={<Cart />} />
           <Route
             path='*'
             element={

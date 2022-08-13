@@ -11,13 +11,13 @@ function Banner() {
 
   return (
     <>
-    <Link to={`/store/outlet`}>
-      <img
-        src={arrayBanner[0].img}
-        alt=''
-        className='backgroundImg text-center mt-4'
-      />
-      <div className='imgContainer '></div>
+      <Link to={`/store/outlet`}>
+        <img
+          src={arrayBanner[0].img}
+          alt=''
+          className='backgroundImg text-center mt-4'
+        />
+        <div className='imgContainer '></div>
       </Link>
     </>
   );

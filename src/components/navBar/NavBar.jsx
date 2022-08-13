@@ -1,7 +1,6 @@
 import CartWidget from "../cartwidget/CartWidget";
 import "../navBar/NavBar.css";
 import { Link, NavLink } from "react-router-dom";
-import itemsData from "../../data/data";
 
 function NavBar() {
   const menu = [
@@ -38,7 +37,7 @@ function NavBar() {
         "https://res.cloudinary.com/dm01fzgtk/image/upload/v1660145717/proyecto%20coderhouse%20react/006-whatsapp_wldsrd.png",
     },
   ];
-  let activeStyle = {color:"var(--first-color)"}
+  let activeStyle = { color: "var(--first-color)" };
   return (
     <header className='container sticky-top'>
       <nav className='navbar navbar-expand-lg bg-light '>
@@ -66,7 +65,12 @@ function NavBar() {
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
               {menu.map((link) => (
                 <li className='nav-item' key={link.id}>
-                  <NavLink className='nav-link' to={link.url} style={({isActive})=>isActive? activeStyle: undefined}>
+                  <NavLink
+                    className='nav-link'
+                    to={link.url}
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : undefined
+                    }>
                     {link.title}
                   </NavLink>
                 </li>
@@ -75,7 +79,7 @@ function NavBar() {
               <li className='nav-item dropdown'>
                 <a
                   className='nav-link dropdown-toggle'
-                  href='#'
+                  href='/#'
                   role='button'
                   data-bs-toggle='dropdown'
                   aria-expanded='false'>
@@ -88,8 +92,9 @@ function NavBar() {
                       <a
                         className='dropdown-item'
                         target='_blank'
+                        rel='noopener noreferrer'
                         href={link.url}>
-                        <img src={link.image} /> {link.title}
+                        <img src={link.image} alt="link"/> {link.title}
                       </a>
                     </li>
                   ))}

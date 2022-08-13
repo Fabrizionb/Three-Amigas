@@ -12,7 +12,8 @@ function Footer() {
             href='mailto: fabrizionbertolo@gmail.com'
             role='button'
             data-mdb-ripple-color='dark'
-            target='_blank'>
+            target='_blank'
+            rel='noopener noreferrer'>
             <i className='fab fa-google'></i>
           </a>
 
@@ -22,7 +23,8 @@ function Footer() {
             href='https://www.linkedin.com/in/fabrizio-bertolo/'
             role='button'
             data-mdb-ripple-color='dark'
-            target='_blank'>
+            target='_blank'
+            rel='noopener noreferrer'>
             <i className='fab fa-linkedin'></i>
           </a>
 
@@ -32,7 +34,8 @@ function Footer() {
             href='https://github.com/Fabrizionb'
             role='button'
             data-mdb-ripple-color='dark'
-            target='_blank'>
+            target='_blank'
+            rel='noopener noreferrer'>
             <i className='fab fa-github'></i>
           </a>
         </section>
@@ -43,7 +46,7 @@ function Footer() {
       {/* <!-- Copyright --> */}
       <div className='text-center text-light p-3 footerBar'>
         © 2022 Copyright:
-        <a className='text-light' href='#'>
+        <a className='text-light' href='/#'>
           {" "}
           13ReasonToBuy
         </a>

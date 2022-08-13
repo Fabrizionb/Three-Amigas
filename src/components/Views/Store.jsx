@@ -9,7 +9,7 @@ function Store() {
     <>
       <Banner />
       <PaymentListContainer title='Payment Methods' />
-      <ItemListContainer title='Payment Methods'/>
+      <ItemListContainer title='Payment Methods' />
     </>
   );
 }

@@ -1,22 +1,18 @@
 import "./CartWidget.css";
-
+import { NavLink } from "react-router-dom";
 function CartWidget(props) {
-  const mask = { backgroundColor: "rgba(251, 251, 251, 0.15)" };
-
+  let activeStyle = { color: "var(--first-color)" };
   return (
     <>
-      <button
-        onClick={() => alert("Click event")}
-        className='btn btn-outline-dark navCart '
-        id='btnCart'
-        type='button'>
-        <i className='fa-solid fa-cart-shopping'></i> Cart{" "}
-        <span
-          className='badge bg-dark text-white ms-1 rounded-pill cart'
-          id='cart'>
-          0
-        </span>
-      </button>
+      <NavLink
+        className='nav-link'
+        to={"/cart"}
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}>
+        <button type='button' className='btn btn-primary'>
+          Cart <span className='badge bg-secondary mx-1'>4</span>
+          <i className='fa-solid fa-cart-shopping'></i>
+        </button>
+      </NavLink>
     </>
   );
 }
