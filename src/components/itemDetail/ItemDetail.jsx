@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
+
 function ItemDetail({
   name,
   price,
@@ -14,6 +15,41 @@ function ItemDetail({
   id,
   onAdd,
 }) {
+  let [carrito, setCarrito] = useState({
+    name: "",
+    price: 0,
+    image: "",
+    imageTwo: "",
+    imageThree: "",
+    category: "",
+    description: "",
+    stock: 0,
+    id: 0,
+    count: 0,
+  });
+
+  function handleAdd(count) {
+    console.log(
+      `Added to cart ${count} ${category} with id ${id} and price ${
+        price * count
+      }`
+    );
+    setCarrito({
+      name: name,
+      price: price,
+      image: image,
+      imageTwo: imageTwo,
+      imageThree: imageThree,
+      category: category,
+      description: description,
+      stock: stock,
+      id: id,
+      count: count,
+    });
+    
+    /* setState */
+  }
+
   return (
     <>
       <div className='col-md-6 d-flex align-items-center'>
@@ -111,8 +147,14 @@ function ItemDetail({
             <i className='fa fa-share-alt text-muted'></i>
           </div>
 
-          <div className='cart mt-4 align-items-center d-flex'>
-            <ItemCount onAdd={onAdd} stock={stock} />
+          <div className='cart mt-4 d-flex flex-row justify-content-center alig-items-center'>
+            {carrito.count === 0 ? (
+              <ItemCount onAdd={handleAdd} stock={stock} /> //onAdd={onAdd}
+            ) : (
+              <Link to={"/cart"}>
+                <p className='goCart'>Go to Cart</p>
+              </Link>
+            )}
           </div>
         </div>
       </div>

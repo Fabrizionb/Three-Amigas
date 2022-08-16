@@ -38,8 +38,8 @@ function ItemCount(props) {
             id='plus-btn'>
             +
           </button>
-        </div>
-        <Button onAdd={props.onAdd} count={count} text={"Add to Cart"} />
+        </div> 
+        <Button onClick={() => props.onAdd(props.count)} onAdd={props.onAdd} count={count} text={"Add to Cart"} />
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import "./App.css";
 import Home from "../Views/Home";
 import Store from "../Views/Store";
 import Cart from "../Views/Cart";
+import Form from "../Form/Form";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/store' element={<Store />} />
           <Route path='/store/:idCategory' element={<Store />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/form' element={<Form />} />
           <Route
             path='*'
             element={

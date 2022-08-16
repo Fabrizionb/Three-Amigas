@@ -1,9 +1,15 @@
-.addToCart {
-  color: var(--third-color);
-  background-color: var(--second-color);
+.goCart{
+  color: var(--second-font-color)!important;
+  border: 1px solid var(--first-color)!important;
+  background-color: var(--second-color)!important;
+  padding: 4px!important;
+  border-radius: 5px!important;
+}
+.goCart:hover{
+  background-color: var(--first-color)!important;
+  color: var(--second-font-color)!important;
 }
 
-.addToCart:hover {
-  background-color: var(--second-color);
-  color: var(--first-color);
+.ff{
+  background-color: crimson!important;
 }
