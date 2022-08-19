@@ -14,29 +14,31 @@ import Store from "../Views/Store";
 import Cart from "../Views/Cart";
 import Form from "../Form/Form";
 
+import { CartProvider } from "../Store/cartContext";
+
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <NavBar />
-
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/detalle' element={<ItemDetailContainer />} />
-          <Route path='/detalle/:id' element={<ItemDetailContainer />} />
-          <Route path='/store' element={<Store />} />
-          <Route path='/store/:idCategory' element={<Store />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/form' element={<Form />} />
-          <Route
-            path='*'
-            element={
-              <h1 className='text-center mt-5 mb-5'>Product not found</h1>
-            }
-          />
-        </Routes>
-
-        <Footer />
+        <CartProvider>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/detalle' element={<ItemDetailContainer />} />
+            <Route path='/detalle/:id' element={<ItemDetailContainer />} />
+            <Route path='/store' element={<Store />} />
+            <Route path='/store/:idCategory' element={<Store />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/form' element={<Form />} />
+            <Route
+              path='*'
+              element={
+                <h1 className='text-center mt-5 mb-5'>Product not found</h1>
+              }
+            />
+          </Routes>
+          <Footer />
+        </CartProvider>
       </BrowserRouter>
     </div>
   );

@@ -1,8 +1,14 @@
-import React from "react";
+
 import CartItem from "../CartItem/CartItem";
 import "../CartContainer/CartContainer.css";
 import PaymentListContainer from "../paymentListContainer/PaymentListContainer";
+
+
+
+
 const CartContainer = () => {
+  
+  console.log()
   return (
     <>
       {/* <!-- Cart Code Start--> */}
@@ -20,7 +26,8 @@ const CartContainer = () => {
                 {/* <!-- Single item --> */}
 
                 <CartItem />
-                <CartItem />
+                
+
 
                 {/* <!-- Single item --> */}
               </div>
@@ -38,12 +45,8 @@ const CartContainer = () => {
                 </p>
               </div>
             </div>
-            <div className=' mb-4 mb-lg-0'>
-              <div className=''>
-                <PaymentListContainer title='Payment Methods' />
-              </div>
-            </div>
           </div>
+
           <div className='col-md-4  '>
             <div className='w-100 mb-4 '>
               <div className='card-header py-3 '>
@@ -87,6 +90,11 @@ const CartContainer = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+          <div className=' mb-4 mb-lg-0'>
+            <div className=''>
+              <PaymentListContainer title='Payment Methods' />
             </div>
           </div>
         </div>

@@ -1,53 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
+import { cartContext } from "../Store/cartContext";
 
-function ItemDetail({
-  name,
-  price,
-  image,
-  imageTwo,
-  imageThree,
-  category,
-  description,
-  stock,
-  id,
-  onAdd,
-}) {
-  let [carrito, setCarrito] = useState({
-    name: "",
-    price: 0,
-    image: "",
-    imageTwo: "",
-    imageThree: "",
-    category: "",
-    description: "",
-    stock: 0,
-    id: 0,
-    count: 0,
-  });
+function ItemDetail({name,price,image,imageTwo,imageThree,category,description,stock,id,}) {
 
-  function handleAdd(count) {
-    console.log(
-      `Added to cart ${count} ${category} with id ${id} and price ${
-        price * count
-      }`
-    );
-    setCarrito({
-      name: name,
-      price: price,
-      image: image,
-      imageTwo: imageTwo,
-      imageThree: imageThree,
-      category: category,
-      description: description,
-      stock: stock,
-      id: id,
-      count: count,
-    });
-    
-    /* setState */
+  const { addToCart } = useContext(cartContext);
+ 
+  const [quantity, setQuantity] = useState(0);
+  
+
+  function handleAdd(quantity) {
+    const itemToCart = { name, price, image, category, description, stock, id, quantity };
+    addToCart(itemToCart, quantity);
+    setQuantity(quantity)
   }
 
   return (
@@ -148,13 +115,10 @@ function ItemDetail({
           </div>
 
           <div className='cart mt-4 d-flex flex-row justify-content-center alig-items-center'>
-            {carrito.count === 0 ? (
-              <ItemCount onAdd={handleAdd} stock={stock} /> //onAdd={onAdd}
-            ) : (
-              <Link to={"/cart"}>
-                <p className='goCart'>Go to Cart</p>
-              </Link>
-            )}
+            {quantity === 0 ? (
+            <ItemCount onAdd={handleAdd} stock={stock} />) : (<Link to={"/cart"}>
+            <p className='goCart'>Go to Cart</p>
+          </Link>)}
           </div>
         </div>
       </div>
@@ -163,3 +127,5 @@ function ItemDetail({
 }
 
 export default ItemDetail;
+
+

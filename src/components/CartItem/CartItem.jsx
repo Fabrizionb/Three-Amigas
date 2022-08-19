@@ -1,7 +1,8 @@
 import React from "react";
 import "../CartContainer/CartContainer.css";
 import ItemCount from "../itemCount/ItemCount";
-const CartItem = (producto) => {
+
+const CartItem = (product) => {
   return (
     <>
       <div className='row rowItem'>
@@ -10,7 +11,7 @@ const CartItem = (producto) => {
           <div
             className='bg-image hover-overlay hover-zoom ripple rounded mt-3 ms-4 '
             data-mdb-ripple-color='light'>
-            <img src='https://picsum.photos/200/300' className='w-100' alt='' />
+            <img src={product.image} className='w-100' alt='' />
             <a href='#!'>
               <div className='mask'></div>
             </a>
@@ -21,14 +22,14 @@ const CartItem = (producto) => {
         <div className='col-lg-5 col-md-6 mb-4 mb-lg-0 mt-3'>
           {/* <!-- Data --> */}
           <p>
-            <strong>Product Name</strong>
+            <strong>{product.name}</strong>
           </p>
-          <p>Description: Product Description</p>
+          <p>Description: {product.description}</p>
           <p>
-            Price: <strong>$ Product Price</strong>
+            Price: <strong>$ {product.price}</strong>
           </p>
           <p>
-            Subtotal: <strong>$ Subtotal</strong>
+            Subtotal: <strong>$ {product.price * product.quantity}</strong>
           </p>
 
           <i className='fas fa-trash'></i>
@@ -38,7 +39,7 @@ const CartItem = (producto) => {
         <div className='col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center'>
           {/* <!-- Quantity --> */}
           <div className=' mb-4 '>
-            <ItemCount />
+            <ItemCount onAdd={product.handleAdd} stock={product.stock}/>
           </div>
           {/* <!-- Quantity --> */}
         </div>
