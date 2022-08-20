@@ -1,7 +1,12 @@
 import "./CartWidget.css";
 import { NavLink } from "react-router-dom";
-function CartWidget(props) {
+import React, { useContext } from "react";
+import { cartContext } from "../Store/cartContext";
+
+function CartWidget() {
   let activeStyle = { color: "var(--first-color)" };
+  const { itemInCart, cart } = useContext(cartContext);
+  let countCart = itemInCart(cart);
   return (
     <>
       <NavLink
@@ -9,7 +14,7 @@ function CartWidget(props) {
         to={"/cart"}
         style={({ isActive }) => (isActive ? activeStyle : undefined)}>
         <button type='button' className='btn btn-primary'>
-          Cart <span className='badge bg-secondary mx-1'>4</span>
+          Cart <span className='badge bg-secondary mx-1'>{countCart}</span>
           <i className='fa-solid fa-cart-shopping'></i>
         </button>
       </NavLink>

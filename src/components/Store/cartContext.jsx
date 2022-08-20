@@ -8,17 +8,16 @@ export function CartProvider({ children }) {
       /* el item ya existe */
     } else {
       let copyCart = [...cart];
-       copyCart.push({ ...item, quantity });
-      setCart(copyCart)
+      copyCart.push({ ...item, quantity });
+      setCart(copyCart);
     }
-   
   }
 
   function removeItem(itemId) {
     let copyCart = cart.filter((item) => item.id !== itemId);
     setCart(copyCart);
   }
-  
+
   function isInCart(id) {
     return cart.some((itemInCart) => itemInCart.id === id);
   }
@@ -27,8 +26,25 @@ export function CartProvider({ children }) {
     setCart([]);
   }
 
+  function itemInCart(cart) {
+    let count = 0;
+    for (let product of cart) {
+      count += product.quantity;
+    }
+    return count;
+  }
+
   return (
-    <cartContext.Provider value={{ cart, addToCart }}>
+    <cartContext.Provider
+      value={{
+        cart,
+        setCart,
+        addToCart,
+        removeItem,
+        isInCart,
+        clear,
+        itemInCart,
+      }}>
       {children}
     </cartContext.Provider>
   );

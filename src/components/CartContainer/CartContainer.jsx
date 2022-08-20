@@ -2,8 +2,8 @@
 import CartItem from "../CartItem/CartItem";
 import "../CartContainer/CartContainer.css";
 import PaymentListContainer from "../paymentListContainer/PaymentListContainer";
-
-
+import { cartContext } from "../Store/cartContext";
+import React, { useContext } from "react";
 
 
 const CartContainer = () => {
