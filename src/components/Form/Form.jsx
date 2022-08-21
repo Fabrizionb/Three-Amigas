@@ -1,17 +1,18 @@
 import React from "react";
 import "../Form/Form.css";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { cartContext } from "../Store/cartContext";
 const Form = () => {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
     telephone: "",
   });
-
+  const { cart } = useContext(cartContext)
   function handleSubmit(e) {
-    e.preventDefault();
-    console.log(userData);
+      e.preventDefault();
+      var myCurrentDate = new Date()
+    console.log(userData,myCurrentDate,cart);
     setUserData({
       name: "",
       email: "",
@@ -75,11 +76,11 @@ const Form = () => {
 
         <div>
           <button className='mt-2 btn-form' type='submit'>
-            Send
+            Checkout
           </button>
-          <button className='mt-2 btn-form' type='reset'>
+          {/* <button className='mt-2 btn-form' type='reset'>
             Cancel
-          </button>
+          </button> */}
         </div>
       </form>
     </div>

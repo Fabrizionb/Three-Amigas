@@ -1,9 +1,9 @@
 .form-container {
   border-radius: 5px;
   padding: 20px;
-  width: 250px;
+  width: auto;
   margin: 35px auto 5px;
-  background-color: rgb(239, 240, 246);
+  background-color: var(--background-second-color);
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -22,7 +22,33 @@ form {
   margin-bottom: 20px;
 }
 
+/* .btn-form {
+  font-size: 1rem;
+  color: var(--first-font-color);
+  min-width: 17vh;
+  padding: 5px 15px 5px 15px;
+  background-color: var(--second-color);
+  border-radius: 5px;
+  border: 1px solid var(--background-third-color);
+}
+.btn-form:hover {
+  color: var(--second-font-color);
+  background-color: var(--first-color);
+  transition: all 0.3s ease-in-out;
+} */
+
 .btn-form {
-  margin-left: 10px;
-  min-width: 7vh;
+  font-size: 1rem;
+  
+  min-width: 17vh;
+  padding: 5px 15px 5px 15px;
+  
+  border-radius: 5px;
+  background-color: var(--second-color);
+  border: 1px solid var(--first-color);
+  color: var(--second-font-color);
+}
+.btn-form:hover {
+  background-color: var(--first-color) !important;
+  transition: all 0.3s ease-in-out;
 }

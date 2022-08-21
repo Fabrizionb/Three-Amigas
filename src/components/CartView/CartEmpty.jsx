@@ -7,14 +7,14 @@ const CartEmpty = () => {
     <>
       <div className='text-center'>
         <Link to='/store'>
-          <h4 className='cartEmptyTitle'>
+          <h4 className='cartEmptyTitle mt-5'>
             The cart is Empty, go to Store!{" "}
             <i className='fa-solid fa-store'></i>
           </h4>
         </Link>
         <img
-          className='imgCartEmpty'
-          src='https://res.cloudinary.com/dm01fzgtk/image/upload/v1661016290/empty-cart.60e68bfd_dv7aap.png'
+          className='imgCartEmpty mb-5'
+          src='https://res.cloudinary.com/dm01fzgtk/image/upload/v1661092545/emptoy_hovyog.png'
           alt=''></img>
       </div>
     </>

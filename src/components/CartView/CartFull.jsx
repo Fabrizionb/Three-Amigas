@@ -16,9 +16,9 @@ const CartFull = () => {
 
   return (
     <>
-      <div className='container '>
-        <div className='row  d-flex justify-content-center my-4'>
-          <div className='col-md-8 '>
+      <div className='container mt-5 mb-5'>
+        <div className='row  d-flex justify-content-center my-4 mb-5'>
+          <div className='col-md-8  mb-5'>
             <div className=' mb-4 '>
               <div className='card-header py-3'>
                 <h5 className='mb-0'>
@@ -75,7 +75,6 @@ const CartFull = () => {
                 <h5 className=''>Your Order</h5>
               </div>
               <div className='card-body '>
-                <Form />
                 <ul className='list-group list-group-flush finder'>
                   {cart.map((item) => (
                     <li key={item.id}>
@@ -93,23 +92,16 @@ const CartFull = () => {
 
                   <li className='list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3'>
                     <div>
-                      <strong>Total</strong>
+                      <strong>Total: </strong>
                       <strong className='futureDate'>
-                        : {totalPrice()}
+                         {totalPrice()}
                         <p className='mb-0'>(Tax Inc.)</p>
                       </strong>
                     </div>
                     <span id='anchor_strong'> </span>
                   </li>
-                  <li>
-                    <button
-                      type='button'
-                      id='checkOut'
-                      className='checkOut btn btn-primary btn-lg btn-block'>
-                      Checkout
-                    </button>
-                  </li>
                 </ul>
+                <Form />
               </div>
             </div>
           </div>
