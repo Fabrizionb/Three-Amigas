@@ -1,0 +1,11 @@
+.imgCartEmpty {
+    opacity: 0.7;
+}
+
+.cartEmptyTitle:hover{
+color:crimson;
+}
+
+.futureDate{
+    color: var(--first-color)
+}

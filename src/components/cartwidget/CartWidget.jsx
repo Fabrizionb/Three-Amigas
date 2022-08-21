@@ -13,10 +13,17 @@ function CartWidget() {
         className='nav-link'
         to={"/cart"}
         style={({ isActive }) => (isActive ? activeStyle : undefined)}>
-        <button type='button' className='btn btn-primary'>
-          Cart <span className='badge bg-secondary mx-1'>{countCart}</span>
-          <i className='fa-solid fa-cart-shopping'></i>
-        </button>
+        {cart.length === 0 ? (
+          <button type='button' className='btn btn-primary'>
+            Cart
+            <i className='fa-solid fa-cart-shopping'></i>
+          </button>
+        ) : (
+          <button type='button' className='btn btn-primary'>
+            Cart <span className='badge mx-1'>{countCart}</span>
+            <i className='fa-solid fa-cart-shopping'></i>
+          </button>
+        )}
       </NavLink>
     </>
   );

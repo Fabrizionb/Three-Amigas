@@ -26,6 +26,14 @@ export function CartProvider({ children }) {
     setCart([]);
   }
 
+  function totalPrice(){
+    let total = 0;
+    for (let product of cart) {
+      total += product.quantity * product.price;
+    }
+    return total;
+  }
+
   function itemInCart(cart) {
     let count = 0;
     for (let product of cart) {
@@ -33,7 +41,11 @@ export function CartProvider({ children }) {
     }
     return count;
   }
-
+function subTotal(product){
+  let subTotal = 0
+  subTotal = product.price * product.quantity
+  return subTotal
+}
   return (
     <cartContext.Provider
       value={{
@@ -44,6 +56,8 @@ export function CartProvider({ children }) {
         isInCart,
         clear,
         itemInCart,
+        subTotal,
+        totalPrice
       }}>
       {children}
     </cartContext.Provider>

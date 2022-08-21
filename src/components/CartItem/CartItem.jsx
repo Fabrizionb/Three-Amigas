@@ -1,8 +1,10 @@
-import React from "react";
 import "../CartContainer/CartContainer.css";
-import ItemCount from "../itemCount/ItemCount";
+import React, { useContext } from "react";
+import { cartContext } from "../Store/cartContext";
 
 const CartItem = (product) => {
+  const { cart, removeItem, setCart } = useContext(cartContext);
+
   return (
     <>
       <div className='row rowItem'>
@@ -18,31 +20,32 @@ const CartItem = (product) => {
           </div>
           {/* <!-- Image --> */}
         </div>
-
         <div className='col-lg-5 col-md-6 mb-4 mb-lg-0 mt-3'>
           {/* <!-- Data --> */}
-          <p>
+          <h3 className='cartInfo mb-4'>
             <strong>{product.name}</strong>
-          </p>
-          <p>Description: {product.description}</p>
+          </h3>
+          <p className='mb-4'>Description: {product.description}</p>
           <p>
-            Price: <strong>$ {product.price}</strong>
+            Price: <strong className='cartInfo'>$ {product.price}</strong>
           </p>
           <p>
-            Subtotal: <strong>$ {product.price * product.quantity}</strong>
+            Quantity in cart:{" "}
+            <strong className='cartInfo'>{product.quantity}</strong>
+          </p>
+          <p>
+            Subtotal:{" "}
+            <strong className='cartInfo'>
+              $ {product.quantity * product.price}
+            </strong>
           </p>
 
-          <i className='fas fa-trash'></i>
+          <i
+            onClick={() => removeItem(product.id)} title="Delete Item"
+            className='fas fa-trash deleteItem'></i>
           {/* <!-- Data --> */}
         </div>
 
-        <div className='col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center'>
-          {/* <!-- Quantity --> */}
-          <div className=' mb-4 '>
-            <ItemCount onAdd={product.handleAdd} stock={product.stock}/>
-          </div>
-          {/* <!-- Quantity --> */}
-        </div>
         <hr className='my-4' />
       </div>
     </>

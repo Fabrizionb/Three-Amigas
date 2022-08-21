@@ -4,17 +4,34 @@ import "./ItemDetail.css";
 import { Link } from "react-router-dom";
 import { cartContext } from "../Store/cartContext";
 
-function ItemDetail({name,price,image,imageTwo,imageThree,category,description,stock,id,}) {
-
+function ItemDetail({
+  name,
+  price,
+  image,
+  imageTwo,
+  imageThree,
+  category,
+  description,
+  stock,
+  id,
+}) {
   const { addToCart } = useContext(cartContext);
- 
+
   const [quantity, setQuantity] = useState(0);
-  
 
   function handleAdd(quantity) {
-    const itemToCart = { name, price, image, category, description, stock, id, quantity };
+    const itemToCart = {
+      name,
+      price,
+      image,
+      category,
+      description,
+      stock,
+      id,
+      quantity,
+    };
     addToCart(itemToCart, quantity);
-    setQuantity(quantity)
+    setQuantity(quantity);
   }
 
   return (
@@ -116,9 +133,12 @@ function ItemDetail({name,price,image,imageTwo,imageThree,category,description,s
 
           <div className='cart mt-4 d-flex flex-row justify-content-center alig-items-center'>
             {quantity === 0 ? (
-            <ItemCount onAdd={handleAdd} stock={stock} />) : (<Link to={"/cart"}>
-            <p className='goCart'>Go to Cart</p>
-          </Link>)}
+              <ItemCount onAdd={handleAdd} stock={stock} />
+            ) : (
+              <Link to={"/cart"}>
+                <p className='goCart'>Go to Cart</p>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -127,5 +147,3 @@ function ItemDetail({name,price,image,imageTwo,imageThree,category,description,s
 }
 
 export default ItemDetail;
-
-
