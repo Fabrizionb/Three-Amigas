@@ -6,6 +6,7 @@ function NavBar() {
   const menu = [
     { url: "/", title: "Home", id: 1 },
     { url: "/store", title: "Store", id: 2 },
+    { url: "/about", title: "About", id: 3 },
   ];
   const dropDown = [
     {
@@ -100,6 +101,7 @@ function NavBar() {
                   ))}
                 </ul>
               </li>
+             
             </ul>
             <form className='d-flex'>
               <CartWidget />

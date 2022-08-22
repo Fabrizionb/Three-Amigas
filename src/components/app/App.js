@@ -15,6 +15,7 @@ import Cart from "../Views/Cart";
 import Form from "../Form/Form";
 
 import { CartProvider } from "../Store/cartContext";
+import About from "../About/About";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
             <Route path='/store' element={<Store />} />
             <Route path='/store/:idCategory' element={<Store />} />
             <Route path='/cart' element={<Cart />} />
-            <Route path='/form' element={<Form />} />
+            <Route path='/about' element={<About />} />
             <Route
               path='*'
               element={
