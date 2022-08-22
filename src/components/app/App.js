@@ -1,21 +1,19 @@
-// Imports Css
+// Imports
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "../../components/navBar/NavBar";
 
-import Footer from "../../components/footer/Footer";
-import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetailContainer";
+// Imports Css
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 // Imports Components
-
+import NavBar from "../../components/navBar/NavBar";
+import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetailContainer";
 import Home from "../Views/Home";
 import Store from "../Views/Store";
 import Cart from "../Views/Cart";
-import Form from "../Form/Form";
-
-import { CartProvider } from "../Store/cartContext";
 import About from "../About/About";
+import Footer from "../../components/footer/Footer";
+import { CartProvider } from "../Store/cartContext";
 
 function App() {
   return (

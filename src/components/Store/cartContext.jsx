@@ -3,14 +3,10 @@ export const cartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  function addToCart(item, quantity) {
-    if (isInCart(item.id)) {
-      /* el item ya existe */
-    } else {
-      let copyCart = [...cart];
-      copyCart.push({ ...item, quantity });
-      setCart(copyCart);
-    }
+  function addToCart(item, newQuantity) {
+    const newCart = cart.filter((prod) => prod.id !== item.id);
+    newCart.push({ ...item, quantity: newQuantity });
+    setCart(newCart);
   }
 
   function removeItem(itemId) {
@@ -26,7 +22,7 @@ export function CartProvider({ children }) {
     setCart([]);
   }
 
-  function totalPrice(){
+  function totalPrice() {
     let total = 0;
     for (let product of cart) {
       total += product.quantity * product.price;
@@ -41,11 +37,11 @@ export function CartProvider({ children }) {
     }
     return count;
   }
-function subTotal(product){
-  let subTotal = 0
-  subTotal = product.price * product.quantity
-  return subTotal
-}
+  function subTotal(product) {
+    let subTotal = 0;
+    subTotal = product.price * product.quantity;
+    return subTotal;
+  }
   return (
     <cartContext.Provider
       value={{
@@ -57,7 +53,7 @@ function subTotal(product){
         clear,
         itemInCart,
         subTotal,
-        totalPrice
+        totalPrice,
       }}>
       {children}
     </cartContext.Provider>

@@ -8,11 +8,11 @@ const Form = () => {
     email: "",
     telephone: "",
   });
-  const { cart } = useContext(cartContext)
+  const { cart } = useContext(cartContext);
   function handleSubmit(e) {
-      e.preventDefault();
-      var myCurrentDate = new Date()
-    console.log(userData,myCurrentDate,cart);
+    e.preventDefault();
+    var myCurrentDate = new Date();
+    console.log(userData, myCurrentDate, cart);
     setUserData({
       name: "",
       email: "",

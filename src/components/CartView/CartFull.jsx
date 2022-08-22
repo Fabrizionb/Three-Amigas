@@ -70,7 +70,7 @@ const CartFull = () => {
           </div>
 
           <div className='col-md-4  '>
-            <div className=' mb-4 '>
+            <div className=' mb-1 '>
               <div className='card-header py-3 '>
                 <h5 className=''>Your Order</h5>
               </div>
@@ -94,13 +94,15 @@ const CartFull = () => {
                     <div>
                       <strong>Total: </strong>
                       <strong className='futureDate'>
-                         {totalPrice()}
+                        {totalPrice()}
                         <p className='mb-0'>(Tax Inc.)</p>
                       </strong>
                     </div>
                     <span id='anchor_strong'> </span>
                   </li>
+                  <h5 className=''>Contact data</h5>
                 </ul>
+
                 <Form />
               </div>
             </div>

@@ -95,13 +95,12 @@ function NavBar() {
                         target='_blank'
                         rel='noopener noreferrer'
                         href={link.url}>
-                        <img src={link.image} alt="link"/> {link.title}
+                        <img src={link.image} alt='link' /> {link.title}
                       </a>
                     </li>
                   ))}
                 </ul>
               </li>
-             
             </ul>
             <form className='d-flex'>
               <CartWidget />

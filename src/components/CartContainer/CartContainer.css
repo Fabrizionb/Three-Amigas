@@ -23,6 +23,13 @@
   font-size: 15px;
 }
 
-.deleteItem:hover  {
+.deleteItem:hover {
   color: crimson;
+}
+
+p.mutedCart {
+  font-size: small;
+}
+p.mutedCart:hover {
+  color: black !important;
 }

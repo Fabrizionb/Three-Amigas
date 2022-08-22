@@ -1,9 +1,10 @@
 import "../CartContainer/CartContainer.css";
 import React, { useContext } from "react";
 import { cartContext } from "../Store/cartContext";
+import { Link } from "react-router-dom";
 
 const CartItem = (product) => {
-  const { cart, removeItem, setCart } = useContext(cartContext);
+  const { removeItem } = useContext(cartContext);
 
   return (
     <>
@@ -33,6 +34,9 @@ const CartItem = (product) => {
             Quantity in cart:{" "}
             <strong className='cartInfo'>{product.quantity}</strong>
           </p>
+          <Link to={`/detalle/${product.id}`}>
+            <p className='text-muted mutedCart'>Modify amount here</p>
+          </Link>
           <p>
             Subtotal:{" "}
             <strong className='cartInfo'>
@@ -41,7 +45,8 @@ const CartItem = (product) => {
           </p>
 
           <i
-            onClick={() => removeItem(product.id)} title="Delete Item"
+            onClick={() => removeItem(product.id)}
+            title='Delete Item'
             className='fas fa-trash deleteItem'></i>
           {/* <!-- Data --> */}
         </div>

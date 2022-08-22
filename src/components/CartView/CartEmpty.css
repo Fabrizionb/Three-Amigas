@@ -1,12 +1,12 @@
 .imgCartEmpty {
-    margin-top: 14vh!important;
-    opacity: 0.6;
+  margin-top: 14vh !important;
+  opacity: 0.6;
 }
 
-.cartEmptyTitle:hover{
-color:crimson;
+.cartEmptyTitle:hover {
+  color: crimson;
 }
 
-.futureDate{
-    color: var(--first-color)
+.futureDate {
+  color: var(--first-color);
 }

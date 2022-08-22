@@ -16,7 +16,12 @@ const About = () => {
               <p>Mechi Marquéz</p>
             </h2>
             <p>
-            The role of Mechi, in the clothing store is to provide excellent customer service and promote the store's merchandise. She will help customers find the clothing they need and want, providing them with information about the store's products. Mechi will also be responsible for keeping the sales area clean and organized and helping with inventory when necessary.
+              The role of Mechi, in the clothing store is to provide excellent
+              customer service and promote the store's merchandise. She will
+              help customers find the clothing they need and want, providing
+              them with information about the store's products. Mechi will also
+              be responsible for keeping the sales area clean and organized and
+              helping with inventory when necessary.
             </p>
           </div>
           <div className='col-lg-4 mx-auto'>
@@ -30,7 +35,9 @@ const About = () => {
               <p>Pilar Overdeen</p>
             </h2>
             <p>
-            Pilar is responsible for measuring customers and helping them choose the right clothing for their body type. They also help with clothing alterations and repairs.
+              Pilar is responsible for measuring customers and helping them
+              choose the right clothing for their body type. They also help with
+              clothing alterations and repairs.
             </p>
           </div>
           <div className='col-lg-4'>
@@ -44,7 +51,10 @@ const About = () => {
               <p>Tiffany Cuchuruchin</p>
             </h2>
             <p>
-            Tiffany is responsible for the daily operations of the store. Supervising the sales staff, ensuring the store is clean and organized and handling customer complaints. They also work with their partners developing marketing and advertising campaigns.
+              Tiffany is responsible for the daily operations of the store.
+              Supervising the sales staff, ensuring the store is clean and
+              organized and handling customer complaints. They also work with
+              their partners developing marketing and advertising campaigns.
             </p>
           </div>
         </div>

@@ -99,14 +99,14 @@ i.fa-share-alt:hover {
 .px-wide {
   width: 100px;
 }
-.goCart{
+.goCart {
   color: var(--second-font-color);
   border: 1px solid var(--first-color);
   background-color: var(--second-color);
   padding: 4px;
   border-radius: 5px;
 }
-.goCart:hover{
+.goCart:hover {
   background-color: var(--first-color);
   color: var(--second-font-color);
 }
