@@ -1,20 +1,64 @@
+// Imports
 import React, { useEffect, useState } from "react";
-import data from "../../data/data.js";
-import ItemList from "../ItemList/ItemList";
-import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
+import firestoreDB from "../../services/firebase";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
-function getProductos() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(data), 100);
-  });
-}
+// Imports Css
+import "./ItemListContainer.css";
+
+// Imports Components
+import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer(props) {
   const [data, setData] = useState([]);
-  let { idCategory } = useParams();
-  // const idCategory = useParams().idCategory;
+  let { idCategory } = useParams(); // const idCategory = useParams().idCategory;
   const [title, setTitle] = useState("");
+
+  function getItemsFromDBbyIdCategory(idCategory) {
+    return new Promise((resolve) => {
+      const productosCollection = collection(firestoreDB, "products");
+      const q = query(productosCollection, where("category", "==", idCategory));
+      const o = query(productosCollection, where("outlet", "==", true));
+      const a = query(productosCollection, where("category", "!=", true));
+
+      if (idCategory === "outlet") {
+        getDocs(o).then((snapshot) => {
+          const docsData = snapshot.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+          });
+          resolve(docsData);
+          setTitle("Our Outlet Products");
+        });
+      } else if (
+        idCategory === "jeans" ||
+        idCategory === "dresses" ||
+        idCategory === "tops"
+      ) {
+        getDocs(q).then((snapshot) => {
+          const docsData = snapshot.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+          });
+          resolve(docsData);
+          setTitle(`Our ${idCategory} Products`);
+        });
+      } else if (idCategory === "all") {
+          getDocs(a).then((snapshot) => {
+          const docsData = snapshot.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+          });
+          resolve(docsData);
+          setTitle(`Our ${idCategory} Products`);
+        });
+      }
+    });
+  }
+
+  useEffect(() => {
+    getItemsFromDBbyIdCategory(idCategory).then((response) => {
+      setData(response);
+    });
+  }, [idCategory]);
 
   function sortMinus() {
     setData(
@@ -49,26 +93,6 @@ function ItemListContainer(props) {
       )
     );
   }
-
-  useEffect(() => {
-    getProductos().then((respuesta) => {
-      let filters = respuesta.filter(
-        (element) => element.category === idCategory
-      );
-      let outlet = respuesta.filter((element) => element.outlet === true);
-
-      if (idCategory === undefined) {
-        setData(respuesta);
-        setTitle("All our Products");
-      } else if (idCategory === "outlet") {
-        setData(outlet);
-        setTitle("Our Outlet Products");
-      } else {
-        setData(filters);
-        setTitle("Our " + filters[0].category + " Products");
-      }
-    });
-  }, [[idCategory], [data]]);
 
   return (
     <>

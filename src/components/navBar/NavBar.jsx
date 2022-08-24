@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 function NavBar() {
   const menu = [
     { url: "/", title: "Home", id: 1 },
-    { url: "/store", title: "Store", id: 2 },
+    { url: "/store/all", title: "Store", id: 2 },
     { url: "/about", title: "About", id: 3 },
   ];
   const dropDown = [

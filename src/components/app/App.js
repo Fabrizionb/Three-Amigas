@@ -15,9 +15,11 @@ import About from "../About/About";
 import Footer from "../../components/footer/Footer";
 import { CartProvider } from "../Store/cartContext";
 
+
 function App() {
-  return (
+    return (
     <div className='App'>
+      
       <BrowserRouter>
         <CartProvider>
           <NavBar />

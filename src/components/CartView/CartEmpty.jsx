@@ -6,7 +6,7 @@ const CartEmpty = () => {
   return (
     <>
       <div className='text-center'>
-        <Link to='/store'>
+        <Link to='/store/all'>
           <h4 className='cartEmptyTitle mt-5'>
             The cart is Empty, go to Store!{" "}
             <i className='fa-solid fa-store'></i>

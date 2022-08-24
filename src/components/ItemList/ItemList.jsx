@@ -43,7 +43,7 @@ function ItemList({ data, sortMinus, sortPlus }) {
                 <li className='nav-item'>
                   <NavLink
                     className='nav-link'
-                    to={"/store"}
+                    to={"/store/all"}
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }>

@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import data from "../../data/data.js";
 import ItemDetail from "../itemDetail/ItemDetail";
+import firestoreDB from "../../services/firebase";
+import { collection, doc, getDoc } from "firebase/firestore";
 
-function getProductos() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(data), 500);
+function getProductById(id) {
+  return new Promise((resolve, reject) => {
+    const productsCollection = collection(firestoreDB, "products");
+    const docRef = doc(productsCollection, id);
+
+    getDoc(docRef).then((snapshot) => {
+      resolve({ ...snapshot.data(), id: snapshot.id });
+      
+    });
+    
   });
+  
 }
 
 function ItemDetailContainer() {
-  const idUrl = Number(useParams().id);
+  const { id } = useParams();
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getProductos().then((respuesta) => {
-      let find = respuesta.find((element) => element.id === idUrl);
-
-      if (find !== undefined) {
-        setData(find);
-      } else {
-        alert("Product not found");
-      }
+    getProductById(id).then((response) => {
+      setData(response);
     });
-  });
+  }, []);
 
   function onAdd(count) {
     console.log(`You add ${count} products`);
