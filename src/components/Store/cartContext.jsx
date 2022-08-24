@@ -1,4 +1,21 @@
 import { createContext, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
+  const mjeEmpty = () => {
+    toast.success('🦄 Cart Empty', {
+      position: "bottom-center",
+      autoClose: 500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+  }
+
+
+
 export const cartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
@@ -20,6 +37,7 @@ export function CartProvider({ children }) {
 
   function clear() {
     setCart([]);
+    mjeEmpty()
   }
 
   function totalPrice() {
@@ -56,6 +74,7 @@ export function CartProvider({ children }) {
         totalPrice,
       }}>
       {children}
+      <ToastContainer />
     </cartContext.Provider>
   );
 }

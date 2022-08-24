@@ -2,24 +2,18 @@ import "../itemCount/ItemCount.css";
 import React, { useState } from "react";
 import Button from "../button/Button";
 
-
-
-
 function ItemCount(props) {
   let [count, setCount] = useState(1);
-
 
   function handleIncrement() {
     if (count >= 1 && count < props.stock) {
       setCount(count + 1);
-      
     }
   }
 
   function handleDecrement() {
     if (count > 1) {
       setCount(count - 1);
-      
     }
   }
 
@@ -45,6 +39,7 @@ function ItemCount(props) {
             +
           </button>
         </div>
+
         <Button
           onClick={() => props.onAdd(props.count)}
           onAdd={props.onAdd}

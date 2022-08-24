@@ -15,7 +15,6 @@ import About from "../About/About";
 import Footer from "../../components/footer/Footer";
 import { CartProvider } from "../Store/cartContext";
 
-
 function App() {
     return (
     <div className='App'>
@@ -23,6 +22,7 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar />
+          
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/detalle' element={<ItemDetailContainer />} />
