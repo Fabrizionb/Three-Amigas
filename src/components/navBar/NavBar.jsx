@@ -45,7 +45,7 @@ function NavBar() {
         <div className='container-fluid'>
           <Link to='/' className='navbar-brand'>
             <img
-              src='https://res.cloudinary.com/dm01fzgtk/image/upload/v1660145469/proyecto%20coderhouse%20react/small-logo_s940bb.svg'
+              src='https://res.cloudinary.com/dm01fzgtk/image/upload/v1661375339/small-logo_rovb3q.png'
               alt='small logo'
               className='logoStyle'
             />

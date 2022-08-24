@@ -18,3 +18,8 @@ li.nav-item {
 a.nav-link:hover {
   color: var(--first-color);
 }
+
+.logoStyle{
+  height: 70px;
+  
+}

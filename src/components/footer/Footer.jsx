@@ -48,7 +48,7 @@ function Footer() {
         © 2022 Copyright:
         <a className='text-light' href='/#'>
           {" "}
-          13ReasonToBuy
+          threeamigas
         </a>
       </div>
       {/* <!-- Copyright --> */}
