@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
   const mjeEmpty = () => {
-    toast.success('🦄 Cart Empty', {
+    toast.success('🗑️ Cart Empty', {
       position: "bottom-center",
       autoClose: 500,
       hideProgressBar: false,

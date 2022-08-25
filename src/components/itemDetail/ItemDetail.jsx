@@ -3,21 +3,21 @@ import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
 import { cartContext } from "../Store/cartContext";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-  const mjeAdd = () => {
-    toast('🦄 Product added to cart!', {
-      position: "top-right",
-      autoClose: 200,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      });
-  }
-  
+const mjeAdd = () => {
+  toast("🦄 Product added to cart!", {
+    position: "top-right",
+    autoClose: 200,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+};
+
 function ItemDetail({
   name,
   price,
@@ -51,7 +51,7 @@ function ItemDetail({
 
   return (
     <>
-    <ToastContainer />
+      <ToastContainer />
       <div className='col-md-6 d-flex align-items-center'>
         <div
           id='carouselExampleIndicators'

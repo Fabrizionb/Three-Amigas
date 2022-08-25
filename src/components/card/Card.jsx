@@ -33,7 +33,7 @@ function Card({ name, price, image, category, description, stock, onAdd, id }) {
                 Price: <strong>{price}$</strong>
               </span>
               <Link to={`/detalle/${id}`}>
-                <p className="goCart">View More Details</p>
+                <p className='goCart'>View More Details</p>
               </Link>
               {/* <ItemCount onAdd={onAdd} stock={stock} /> */}
             </div>
