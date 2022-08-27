@@ -22,21 +22,6 @@ form {
   margin-bottom: 20px;
 }
 
-/* .btn-form {
-  font-size: 1rem;
-  color: var(--first-font-color);
-  min-width: 17vh;
-  padding: 5px 15px 5px 15px;
-  background-color: var(--second-color);
-  border-radius: 5px;
-  border: 1px solid var(--background-third-color);
-}
-.btn-form:hover {
-  color: var(--second-font-color);
-  background-color: var(--first-color);
-  transition: all 0.3s ease-in-out;
-} */
-
 .btn-form {
   font-size: 1rem;
 

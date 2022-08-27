@@ -64,16 +64,6 @@ const Form = () => {
     });
   }
 
-  if (orderFirebase.complete === true) {
-    return (
-      <div>
-        <img src="https://res.cloudinary.com/dm01fzgtk/image/upload/v1661621605/thank-you-for-your-purchase-message-1_nwxsjm.png" alt="img order complete"></img>
-        <p className="mt-2 ">Your Follow id is: <span>{orderFirebase.id}</span></p>
-      </div>
-    );
-  }
-
-
   return (
     <div className='form-container container d-flex align-items-center justify-content-center'>
       <form onSubmit={handleSubmit} onReset={handleReset}>
@@ -113,9 +103,6 @@ const Form = () => {
           <button className='mt-2 btn-form' type='submit'>
             Checkout
           </button>
-          {/* <button className='mt-2 btn-form' type='reset'>
-            Cancel
-          </button> */}
         </div>
       </form>
     </div>
