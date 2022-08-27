@@ -1,23 +1,48 @@
 import React from "react";
 import "../Form/Form.css";
 import { useState, useContext } from "react";
-import { cartContext } from "../Store/cartContext";
+import { cartContext } from "../../Store/cartContext";
+import firestoreDB from "../../services/firebase";
+import { useNavigate } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+
 const Form = () => {
+  const { cart, setCart } = useContext(cartContext);
   const [userData, setUserData] = useState({
     name: "",
     email: "",
     telephone: "",
   });
-  const { cart } = useContext(cartContext);
-  function handleSubmit(e) {
+
+  let navigate = useNavigate();
+  const [orderFirebase, setOrderFirebase] = useState({
+    id: "",
+    complete: false,
+  });
+
+  // Read total from cart data
+  let total = 0;
+  cart.forEach((item) => {
+    total += item.price * item.quantity;
+  });
+  
+  // Order maker
+  const ordenDeCompra = {
+    buyer: { ...userData },
+    items: [...cart],
+    total: total,
+    date: new Date(),
+  };
+
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    var myCurrentDate = new Date();
-    console.log(userData, myCurrentDate, cart);
-    setUserData({
-      name: "",
-      email: "",
-      telephone: "",
-    });
+
+    const collectionRef = collection(firestoreDB, "orders");
+    const order = await addDoc(collectionRef, ordenDeCompra);
+    setOrderFirebase({ id: order.id, complete: true });
+    navigate('/thanks')
+    setCart([])
   }
 
   function inputChangeHandler(e) {
@@ -38,6 +63,16 @@ const Form = () => {
       telephone: "",
     });
   }
+
+  if (orderFirebase.complete === true) {
+    return (
+      <div>
+        <img src="https://res.cloudinary.com/dm01fzgtk/image/upload/v1661621605/thank-you-for-your-purchase-message-1_nwxsjm.png" alt="img order complete"></img>
+        <p className="mt-2 ">Your Follow id is: <span>{orderFirebase.id}</span></p>
+      </div>
+    );
+  }
+
 
   return (
     <div className='form-container container d-flex align-items-center justify-content-center'>

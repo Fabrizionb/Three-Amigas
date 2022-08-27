@@ -4,7 +4,6 @@ import ItemDetail from "../itemDetail/ItemDetail";
 import firestoreDB from "../../services/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
 
-
 function getProductById(id) {
   return new Promise((resolve, reject) => {
     const productsCollection = collection(firestoreDB, "products");
@@ -12,11 +11,8 @@ function getProductById(id) {
 
     getDoc(docRef).then((snapshot) => {
       resolve({ ...snapshot.data(), id: snapshot.id });
-      
     });
-    
   });
-  
 }
 
 function ItemDetailContainer() {

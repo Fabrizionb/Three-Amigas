@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PaymentListContainer from "../paymentListContainer/PaymentListContainer";
 import CartItem from "../CartItem/CartItem";
 import Form from "../Form/Form";
-import { cartContext } from "../Store/cartContext";
+import { cartContext } from "../../Store/cartContext";
 
 const date = () => {
   var myCurrentDate = new Date();
@@ -100,7 +100,7 @@ const CartFull = () => {
                     </div>
                     <span id='anchor_strong'> </span>
                   </li>
-                  <h5 className=''>Contact data</h5>
+                  
                 </ul>
 
                 <Form />

@@ -1,7 +1,7 @@
 import "./CartWidget.css";
 import { NavLink } from "react-router-dom";
 import React, { useContext } from "react";
-import { cartContext } from "../Store/cartContext";
+import { cartContext } from "../../Store/cartContext";
 
 function CartWidget() {
   let activeStyle = { color: "var(--first-color)" };

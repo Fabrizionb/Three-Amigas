@@ -1,29 +1,41 @@
 import { createContext, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-  const mjeEmpty = () => {
-    toast.success('🗑️ Cart Empty', {
-      position: "bottom-center",
-      autoClose: 500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      });
-  }
-
-
+const mjeEmpty = () => {
+  toast.success("🗑️ Cart Empty", {
+    position: "bottom-center",
+    autoClose: 500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+};
 
 export const cartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  function addToCart(item, newQuantity) {
-    const newCart = cart.filter((prod) => prod.id !== item.id);
-    newCart.push({ ...item, quantity: newQuantity });
-    setCart(newCart);
+  function addToCart(item, quantity) {
+    if (isInCart(item.id)) {
+      setCart(
+        cart.map((product) => {
+          return product.id === item.id
+            ? {
+                stock: product.stock - quantity,
+                ...product,
+                quantity: product.quantity + quantity,
+              }
+            : product;
+        })
+      );
+    } else {
+      item.stock -= quantity;
+      const newItem = { ...item, quantity };
+      setCart([...cart, newItem]);
+    }
   }
 
   function removeItem(itemId) {
@@ -37,7 +49,7 @@ export function CartProvider({ children }) {
 
   function clear() {
     setCart([]);
-    mjeEmpty()
+    mjeEmpty();
   }
 
   function totalPrice() {

@@ -8,12 +8,13 @@ import "./App.css";
 // Imports Components
 import NavBar from "../../components/navBar/NavBar";
 import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetailContainer";
-import Home from "../Views/Home";
-import Store from "../Views/Store";
-import Cart from "../Views/Cart";
+import Home from "../../Views/Home";
+import Store from "../../Views/Store";
+import Cart from "../../Views/Cart";
 import About from "../About/About";
+import Thanks from "../Thanks/Thanks";
 import Footer from "../../components/footer/Footer";
-import { CartProvider } from "../Store/cartContext";
+import { CartProvider } from "../../Store/cartContext";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path='/store/:idCategory' element={<Store />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/about' element={<About />} />
+            <Route path='/thanks' element={<Thanks />} />
             <Route
               path='*'
               element={

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
-import { cartContext } from "../Store/cartContext";
+import { cartContext } from "../../Store/cartContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -134,7 +134,6 @@ function ItemDetail({
 
           <div className='price d-flex flex-row align-items-center '>
             <h5>
-              {" "}
               Price:
               <span className='act-price '> ${price}</span>
             </h5>

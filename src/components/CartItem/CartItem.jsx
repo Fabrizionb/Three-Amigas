@@ -1,6 +1,6 @@
 import "../CartContainer/CartContainer.css";
 import React, { useContext } from "react";
-import { cartContext } from "../Store/cartContext";
+import { cartContext } from "../../Store/cartContext";
 import { Link } from "react-router-dom";
 
 const CartItem = (product) => {
@@ -30,6 +30,10 @@ const CartItem = (product) => {
           <p>
             Price: <strong className='cartInfo'>$ {product.price}</strong>
           </p>
+          <h5>
+              stock:
+              <span className='act-price '>{product.stock}</span>
+            </h5>
           <p>
             Quantity in cart:{" "}
             <strong className='cartInfo'>{product.quantity}</strong>
