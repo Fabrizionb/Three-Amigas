@@ -55,7 +55,7 @@ Project Status
 
 * * *
 
-13 Reasons to Buy is still in progress. Upgrades will be out soon.
+Three Amigas is still in progress. Upgrades will be out soon.
 
 Features to be added
 --------------------------
