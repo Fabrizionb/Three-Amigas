@@ -3,16 +3,6 @@
   margin-right: 2vh;
 }
 
-/* .itemCount{
-    color: var(--third-color);
-    background-color: var(--second-color)
-}
-
-.itemCount:hover{
-    background-color: var(--second-color);
-    color: var(--first-color);
-} */
-
 #plus-btn {
   background-color: rgb(130, 206, 130);
   color: #fff;
