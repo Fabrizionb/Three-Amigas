@@ -11,7 +11,7 @@ General Information
 * * *
 
 *  Three Amigas is part of the final project of the ReactJs training at CoderHouse
-Link to [Demo](https://630a80cb1b8fa53f01654e5f--iridescent-meringue-7d1be3.netlify.app/)
+*  Link to [Demo](https://630a80cb1b8fa53f01654e5f--iridescent-meringue-7d1be3.netlify.app/)
 
 Technologies Used
 -----------------
@@ -73,7 +73,7 @@ Acknowledgement
 
 * * *
 
-*   This project was inspired by
+*   This project was inspired by many sites. 
 
 Contact
 -------
