@@ -7,8 +7,7 @@ const Thanks = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/')
-      console.log('This will run after 5 second!')
+      navigate("/");
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
@@ -21,7 +20,7 @@ const Thanks = () => {
         Redirecting to the main page in 5 seconds.{" "}
         <Link to='/'>Click here to go now.</Link>{" "}
       </p>
-      
+
       <img
         className='mb-1'
         src='https://res.cloudinary.com/dm01fzgtk/image/upload/v1661621605/thank-you-for-your-purchase-message-1_nwxsjm.png'

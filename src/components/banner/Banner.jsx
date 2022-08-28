@@ -15,6 +15,7 @@ function Banner() {
         <img
           src={arrayBanner[0].img}
           alt=''
+          title="Click here to see our outlet products"
           className='backgroundImg text-center mt-4'
         />
         <div className='imgContainer '></div>
