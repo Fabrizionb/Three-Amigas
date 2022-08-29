@@ -62,11 +62,12 @@ Features to be added
 
 * * *
 
-*   Make Cards in Store responsive.
+*  ~~Make Cards in Store responsive.~~ Done
 
 *   ~~Add Cart section.~~ Done
 
 *   ~~Add Checkout section.~~ Done
+
 
 Acknowledgement
 ---------------
