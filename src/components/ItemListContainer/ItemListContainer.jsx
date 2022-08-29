@@ -28,7 +28,7 @@ function ItemListContainer(props) {
           return { ...doc.data(), id: doc.id };
           });
           resolve(docsData);
-          setTitle("Our Outlet Products");
+          setTitle("Outlet products");
         });
       } else if (
         idCategory === "jeans" ||
@@ -40,7 +40,7 @@ function ItemListContainer(props) {
           return { ...doc.data(), id: doc.id };
           });
           resolve(docsData);
-          setTitle(`Our ${idCategory} Products`);
+          setTitle(`Our ${idCategory}`);
         });
       } else if (idCategory === "all") {
           getDocs(a).then((snapshot) => {
@@ -48,7 +48,7 @@ function ItemListContainer(props) {
           return { ...doc.data(), id: doc.id };
           });
           resolve(docsData);
-          setTitle(`Our ${idCategory} Products`);
+          setTitle(`All our products`);
         });
       }
     });

@@ -10,7 +10,7 @@ function ItemList({ data, sortMinus, sortPlus }) {
   let activeStyle = { color: "var(--first-color)" };
   return (
     <>
-      <div className='container '>
+      <div className='container d-flex align-items-center justify-content-center'>
         <div className='row  d-flex mt-1 d-flex flex-wrap align-items-start '>
           <div className='col-md-2 '>
             <div className='col-md-6 col-lg-12 mb-5'>
@@ -99,22 +99,26 @@ function ItemList({ data, sortMinus, sortPlus }) {
               {/* <!-- Radio group --> */}
             </div>
           </div>
-          <div className='col-md-10 row'>
-            {data.map((item) => (
-              <Card
-                key={item.id}
-                name={item.name}
-                price={item.price}
-                image={item.image}
-                category={item.category}
-                description={item.description}
-                count={item.count}
-                stock={item.stock}
-                onAdd={onAdd}
-                id={item.id}
-              />
-            ))}
-            {/*<!-- Grid column --> */}
+          <div className="container col-10 d-flex align-items-center justify-content-center">   
+          <div className=''>
+            <div className='row d-flex align-items-center justify-content-center'>
+              {data.map((item) => (
+                <Card
+                  key={item.id}
+                  name={item.name}
+                  price={item.price}
+                  image={item.image}
+                  category={item.category}
+                  description={item.description}
+                  count={item.count}
+                  stock={item.stock}
+                  onAdd={onAdd}
+                  id={item.id}
+                />
+              ))}
+              {/*<!-- Grid column --> */}
+            </div>
+          </div>
           </div>
         </div>
       </div>
