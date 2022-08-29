@@ -11,6 +11,7 @@ function Banner() {
 
   return (
     <>
+    <div className="container">
       <Link to={`/store/outlet`}>
         <img
           src={arrayBanner[0].img}
@@ -20,6 +21,7 @@ function Banner() {
         />
         <div className='imgContainer '></div>
       </Link>
+      </div>
     </>
   );
 }
