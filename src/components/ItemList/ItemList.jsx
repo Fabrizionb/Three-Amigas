@@ -1,8 +1,7 @@
-import React from "react"
+import React from "react";
 import Card from "../card/Card";
 import { NavLink } from "react-router-dom";
 import "./ItemList.css";
-
 
 function ItemList({ data, sortMinus, sortPlus }) {
   function onAdd(count) {
@@ -122,26 +121,26 @@ function ItemList({ data, sortMinus, sortPlus }) {
               {/* <!-- Radio group --> */}
             </div>
           </div>
-          <div className="container col-10 d-flex align-items-center justify-content-center">   
-          <div className=''>
-            <div className='row d-flex align-items-center justify-content-center'>
-              {data.map((item) => (
-                <Card
-                  key={item.id}
-                  name={item.name}
-                  price={item.price}
-                  image={item.image}
-                  category={item.category}
-                  description={item.description}
-                  count={item.count}
-                  stock={item.stock}
-                  onAdd={onAdd}
-                  id={item.id}
-                />
-              ))}
-              {/*<!-- Grid column --> */}
+          <div className='container col-10 d-flex align-items-center justify-content-center'>
+            <div className=''>
+              <div className='row d-flex align-items-center justify-content-center'>
+                {data.map((item) => (
+                  <Card
+                    key={item.id}
+                    name={item.name}
+                    price={item.price}
+                    image={item.image}
+                    category={item.category}
+                    description={item.description}
+                    count={item.count}
+                    stock={item.stock}
+                    onAdd={onAdd}
+                    id={item.id}
+                  />
+                ))}
+                {/*<!-- Grid column --> */}
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
