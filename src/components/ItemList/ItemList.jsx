@@ -1,7 +1,8 @@
-import React from "react";
+import React from "react"
 import Card from "../card/Card";
 import { NavLink } from "react-router-dom";
 import "./ItemList.css";
+
 
 function ItemList({ data, sortMinus, sortPlus }) {
   function onAdd(count) {
@@ -81,6 +82,28 @@ function ItemList({ data, sortMinus, sortPlus }) {
                       isActive ? activeStyle : undefined
                     }>
                     Tops
+                  </NavLink>
+                </li>
+
+                <li className='nav-item'>
+                  <NavLink
+                    className='nav-link'
+                    to={"/store/jackets"}
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : undefined
+                    }>
+                    Jackets
+                  </NavLink>
+                </li>
+
+                <li className='nav-item'>
+                  <NavLink
+                    className='nav-link'
+                    to={"/store/accesories"}
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : undefined
+                    }>
+                    Accesories
                   </NavLink>
                 </li>
 

@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, collection, addDoc  } from 'firebase/firestore';
+import newProducts from "../data/newProducts"
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -22,5 +23,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestoreDB = getFirestore(app);
 
+export async function saveProductsToFirebase() {
+  const collectionMovies = collection(firestoreDB, "products");
+
+  for (let item of newProducts) {
+    const docref = await addDoc(collectionMovies, item);
+    console.log("document push with id:", docref.id);
+  }
+}
 
 export default firestoreDB;

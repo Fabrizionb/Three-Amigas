@@ -39,7 +39,9 @@ function ItemListContainer(props) {
           } else if (
             idCategory === "jeans" ||
             idCategory === "dresses" ||
-            idCategory === "tops"
+            idCategory === "jackets" ||
+            idCategory === "tops" ||
+            idCategory === "accesories"
           ) {
             getDocs(q).then((snapshot) => {
               const docsData = snapshot.docs.map((doc) => {
@@ -81,7 +83,9 @@ function ItemListContainer(props) {
       } else if (
         idCategory === "jeans" ||
         idCategory === "dresses" ||
-        idCategory === "tops"
+        idCategory === "tops"||
+        idCategory === "jackets" ||
+        idCategory === "accesories" 
       ) {
         getDocs(q).then((snapshot) => {
           const docsData = snapshot.docs.map((doc) => {
@@ -144,14 +148,14 @@ function ItemListContainer(props) {
   if (data.length === 0) {
     return (
       <>
-      <div
-        className='d-flex align-items-center justify-content-center
+        <div
+          className='d-flex align-items-center justify-content-center
       container mx-auto mt-5'>
-        <Metronome size={90} speed={1.6} color='#1c73bf'/>
-      </div>
-      <div>
-      <h4 className='text-center '>Loading...</h4>
-      </div>
+          <Metronome size={90} speed={1.6} color='#1c73bf' />
+        </div>
+        <div>
+          <h4 className='text-center '>Loading...</h4>
+        </div>
       </>
     );
   }

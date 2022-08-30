@@ -40,9 +40,9 @@ function NavBar() {
   ];
   let activeStyle = { color: "var(--first-color)" };
   return (
-    <header className='container sticky-top'>
+    <header className=' sticky-top'>
       <nav className='navbar navbar-expand-lg bg-light '>
-        <div className='container-fluid'>
+        <div className='container-fluid container'>
           <Link to='/' className='navbar-brand'>
             <img
               src='https://res.cloudinary.com/dm01fzgtk/image/upload/v1661375339/small-logo_rovb3q.png'
