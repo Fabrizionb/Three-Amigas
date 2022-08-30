@@ -23,13 +23,16 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestoreDB = getFirestore(app);
 
+// Save new Products in Firebase
 export async function saveProductsToFirebase() {
-  const collectionMovies = collection(firestoreDB, "products");
+  const collectionProducts = collection(firestoreDB, "products");
 
   for (let item of newProducts) {
-    const docref = await addDoc(collectionMovies, item);
+    const docref = await addDoc(collectionProducts, item);
     console.log("document push with id:", docref.id);
   }
 }
+
+
 
 export default firestoreDB;
