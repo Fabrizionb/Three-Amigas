@@ -15,7 +15,6 @@ function ItemListContainer(props) {
   const [data, setData] = useState([]);
   let { idCategory } = useParams(); // const idCategory = useParams().idCategory;
   const [title, setTitle] = useState("");
-
   useEffect(() => {
     const timer = setTimeout(() => {
       function getItemsFromDBbyIdCategory(idCategory) {
@@ -27,7 +26,6 @@ function ItemListContainer(props) {
           );
           const o = query(productosCollection, where("outlet", "==", true));
           const a = query(productosCollection, where("category", "!=", true));
-
           if (idCategory === "outlet") {
             getDocs(o).then((snapshot) => {
               const docsData = snapshot.docs.map((doc) => {
@@ -64,14 +62,12 @@ function ItemListContainer(props) {
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
-
   function getItemsFromDBbyIdCategory(idCategory) {
     return new Promise((resolve) => {
       const productosCollection = collection(firestoreDB, "products");
       const q = query(productosCollection, where("category", "==", idCategory));
       const o = query(productosCollection, where("outlet", "==", true));
       const a = query(productosCollection, where("category", "!=", true));
-
       if (idCategory === "outlet") {
         getDocs(o).then((snapshot) => {
           const docsData = snapshot.docs.map((doc) => {
@@ -83,9 +79,9 @@ function ItemListContainer(props) {
       } else if (
         idCategory === "jeans" ||
         idCategory === "dresses" ||
-        idCategory === "tops"||
+        idCategory === "tops" ||
         idCategory === "jackets" ||
-        idCategory === "accesories" 
+        idCategory === "accesories"
       ) {
         getDocs(q).then((snapshot) => {
           const docsData = snapshot.docs.map((doc) => {
@@ -105,13 +101,11 @@ function ItemListContainer(props) {
       }
     });
   }
-
   useEffect(() => {
     getItemsFromDBbyIdCategory(idCategory).then((response) => {
       setData(response);
     });
   }, [idCategory]);
-
   function sortMinus() {
     setData(
       [].concat(
@@ -128,7 +122,6 @@ function ItemListContainer(props) {
       )
     );
   }
-
   function sortPlus() {
     setData(
       [].concat(

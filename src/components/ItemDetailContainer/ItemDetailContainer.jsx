@@ -8,27 +8,22 @@ function getProductById(id) {
   return new Promise((resolve, reject) => {
     const productsCollection = collection(firestoreDB, "products");
     const docRef = doc(productsCollection, id);
-
     getDoc(docRef).then((snapshot) => {
       resolve({ ...snapshot.data(), id: snapshot.id });
     });
   });
 }
-
 function ItemDetailContainer() {
   const { id } = useParams();
   const [data, setData] = useState([]);
-
   useEffect(() => {
     getProductById(id).then((response) => {
       setData(response);
     });
   }, []);
-
   function onAdd(count) {
     console.log(`You add ${count} products`);
   }
-
   return (
     <>
       <h4 className='text-center mt-5 flashTitle'>Product Detail</h4>

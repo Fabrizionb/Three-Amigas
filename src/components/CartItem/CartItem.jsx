@@ -31,9 +31,9 @@ const CartItem = (product) => {
             Price: <strong className='cartInfo'>$ {product.price}</strong>
           </p>
           <h5>
-              stock:
-              <span className='act-price '>{product.stock}</span>
-            </h5>
+            stock:
+            <span className='act-price '>{product.stock}</span>
+          </h5>
           <p>
             Quantity in cart:{" "}
             <strong className='cartInfo'>{product.quantity}</strong>
@@ -47,14 +47,12 @@ const CartItem = (product) => {
               $ {product.quantity * product.price}
             </strong>
           </p>
-
           <i
             onClick={() => removeItem(product.id)}
             title='Delete Item'
             className='fas fa-trash deleteItem'></i>
           {/* <!-- Data --> */}
         </div>
-
         <hr className='my-4' />
       </div>
     </>

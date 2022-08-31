@@ -1,6 +1,7 @@
 import React from "react";
 import "./Blog.css";
 import blog from "../../data/blog.js";
+
 function BlogRight() {
   return (
     <article className='postcard light blue'>

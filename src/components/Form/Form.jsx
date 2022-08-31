@@ -13,19 +13,16 @@ const Form = () => {
     email: "",
     telephone: "",
   });
-
   let navigate = useNavigate();
   const [orderFirebase, setOrderFirebase] = useState({
     id: "",
     complete: false,
   });
-
   // Read total from cart data
   let total = 0;
   cart.forEach((item) => {
     total += item.price * item.quantity;
   });
-  
   // Order maker
   const ordenDeCompra = {
     buyer: { ...userData },
@@ -33,29 +30,23 @@ const Form = () => {
     total: total,
     date: new Date(),
   };
-
-
   async function handleSubmit(e) {
     e.preventDefault();
 
     const collectionRef = collection(firestoreDB, "orders");
     const order = await addDoc(collectionRef, ordenDeCompra);
     setOrderFirebase({ id: order.id, complete: true });
-    navigate('/thanks')
-    setCart([])
+    navigate("/thanks");
+    setCart([]);
   }
-
   function inputChangeHandler(e) {
     const input = e.target;
     const value = input.value;
     const inputName = input.name;
-
     let copyUserData = { ...userData };
-
     copyUserData[inputName] = value;
     setUserData(copyUserData);
   }
-
   function handleReset(e) {
     setUserData({
       name: "",
@@ -63,7 +54,6 @@ const Form = () => {
       telephone: "",
     });
   }
-
   return (
     <div className='form-container container d-flex align-items-center justify-content-center'>
       <form onSubmit={handleSubmit} onReset={handleReset}>
@@ -78,7 +68,6 @@ const Form = () => {
             type='text'
             placeholder='Name'></input>
         </div>
-
         <div className='form-item mt-1'>
           <label htmlFor='telephone'>Telephone: </label>
           <input
@@ -88,7 +77,6 @@ const Form = () => {
             type='text'
             placeholder='Telephone'></input>
         </div>
-
         <div className='form-item mt-1'>
           <label htmlFor='email'>Email: </label>
           <input
@@ -98,7 +86,6 @@ const Form = () => {
             type='text'
             placeholder='Email'></input>
         </div>
-
         <div>
           <button className='mt-2 btn-form' type='submit'>
             Checkout

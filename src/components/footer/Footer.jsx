@@ -16,7 +16,6 @@ function Footer() {
             rel='noopener noreferrer'>
             <i className='fab fa-google'></i>
           </a>
-
           {/* <!-- Linkedin --> */}
           <a
             className='btn btn-link btn-floating btn-lg text-dark m-1'
@@ -27,7 +26,6 @@ function Footer() {
             rel='noopener noreferrer'>
             <i className='fab fa-linkedin'></i>
           </a>
-
           {/* <!-- Github --> */}
           <a
             className='btn btn-link btn-floating btn-lg text-dark m-1'
@@ -42,7 +40,6 @@ function Footer() {
         {/* <!-- Section: Social media --> */}
       </div>
       {/* <!-- Grid container --> */}
-
       {/* <!-- Copyright --> */}
       <div className='text-center text-light p-3 footerBar'>
         © 2022 Copyright:

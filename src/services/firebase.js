@@ -23,7 +23,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestoreDB = getFirestore(app);
 
-// Save new Products in Firebase
+// Save new Products in Firebase from data/newProducts
 export async function saveProductsToFirebase() {
   const collectionProducts = collection(firestoreDB, "products");
 

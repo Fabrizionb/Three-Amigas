@@ -17,7 +17,6 @@ const mjeAdd = () => {
     progress: undefined,
   });
 };
-
 function ItemDetail({
   name,
   price,
@@ -30,9 +29,7 @@ function ItemDetail({
   id,
 }) {
   const { addToCart } = useContext(cartContext);
-
   const [quantity, setQuantity] = useState(0);
-
   function handleAdd(quantity) {
     const itemToCart = {
       name,
@@ -48,7 +45,6 @@ function ItemDetail({
     setQuantity(quantity);
     mjeAdd();
   }
-
   return (
     <>
       <ToastContainer />
@@ -113,7 +109,6 @@ function ItemDetail({
           </button>
         </div>
       </div>
-
       <div className='col-md-6 f'>
         <div className='product p-4'>
           <div className='d-flex justify-content-between align-items-center'>
@@ -124,14 +119,11 @@ function ItemDetail({
               </Link>
             </div>
           </div>
-
           <div className='mt-4 mb-3'>
             <span className='text-uppercase text-muted brand'>{category}</span>
             <h3 className='text-uppercase mt-2 mb-4'>{name}</h3>
-
             <p className='about mb-3'>{description}</p>
           </div>
-
           <div className='price d-flex flex-row align-items-center '>
             <h5>
               Price:
@@ -145,7 +137,6 @@ function ItemDetail({
             <i className='fa fa-heart text-muted '></i>
             <i className='fa fa-share-alt text-muted'></i>
           </div>
-
           <div className='cart mt-4 d-flex flex-row justify-content-center alig-items-center'>
             {quantity === 0 ? (
               <ItemCount onAdd={handleAdd} stock={stock} />

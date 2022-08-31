@@ -7,6 +7,15 @@ function ItemList({ data, sortMinus, sortPlus }) {
   function onAdd(count) {
     console.log(`You add ${count} products`);
   }
+  const radioGroup = [
+    { name: "All", route: "/store/all" },
+    { name: "Jeans", route: "/store/jeans" },
+    { name: "jackets", route: "/store/jackets" },
+    { name: "Dresses", route: "/store/dresses" },
+    { name: "Tops", route: "/store/tops" },
+    { name: "Accesories", route: "/store/accesories" },
+    { name: "Outlet", route: "/store/outlet" },
+  ];
   let activeStyle = { color: "var(--first-color)" };
   return (
     <>
@@ -15,109 +24,37 @@ function ItemList({ data, sortMinus, sortPlus }) {
           <div className='col-md-2 '>
             <div className='col-md-6 col-lg-12 mb-5'>
               {/* <!-- Panel --> */}
-
               <h5 className='font-weight-bold dark-grey-text'>
                 <strong>Order By</strong>
               </h5>
-
               <div className='divider'></div>
-
               <p onClick={() => sortMinus()} className='dark-grey-text sort'>
                 Price: low to high
               </p>
-
               <p onClick={() => sortPlus()} className='dark-grey-text sort'>
                 Price: high to low
               </p>
             </div>
-
             {/* <!-- Filter by category --> */}
             <div className='col-md-6 col-lg-12 mb-5'>
               <h5 className='font-weight-bold dark-grey-text'>
                 <strong>Categories</strong>
               </h5>
-
               {/* <!-- Radio group --> */}
-
               <ul>
-                <li className='nav-item'>
-                  <NavLink
-                    className='nav-link'
-                    to={"/store/all"}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }>
-                    All
-                  </NavLink>
-                </li>
-
-                <li className='nav-item'>
-                  <NavLink
-                    className='nav-link'
-                    to={"/store/jeans/"}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }>
-                    Jeans
-                  </NavLink>
-                </li>
-
-                <li className='nav-item'>
-                  <NavLink
-                    className='nav-link'
-                    to={"/store/dresses"}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }>
-                    Dresses
-                  </NavLink>
-                </li>
-
-                <li className='nav-item'>
-                  <NavLink
-                    className='nav-link'
-                    to={"/store/tops"}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }>
-                    Tops
-                  </NavLink>
-                </li>
-
-                <li className='nav-item'>
-                  <NavLink
-                    className='nav-link'
-                    to={"/store/jackets"}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }>
-                    Jackets
-                  </NavLink>
-                </li>
-
-                <li className='nav-item'>
-                  <NavLink
-                    className='nav-link'
-                    to={"/store/accesories"}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }>
-                    Accesories
-                  </NavLink>
-                </li>
-
-                <li className='nav-item'>
-                  <NavLink
-                    className='nav-link'
-                    to={"/store/outlet"}
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }>
-                    Outlet
-                  </NavLink>
-                </li>
+                {radioGroup.map((item) => (
+                  <li className='nav-item'>
+                    <NavLink
+                      className='nav-link'
+                      to={item.route}
+                      style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                      }>
+                      {item.name}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
-
               {/* <!-- Radio group --> */}
             </div>
           </div>

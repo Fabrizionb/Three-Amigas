@@ -4,14 +4,12 @@ import PropagateLoader from "react-spinners/PropagateLoader";
 
 const Thanks = () => {
   let navigate = useNavigate();
-
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/");
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <div className='text-center mt-5'>
       <br></br>
@@ -20,7 +18,6 @@ const Thanks = () => {
         Redirecting to the main page in 5 seconds.{" "}
         <Link to='/'>Click here to go now.</Link>{" "}
       </p>
-
       <img
         className='mb-1'
         src='https://res.cloudinary.com/dm01fzgtk/image/upload/v1661621605/thank-you-for-your-purchase-message-1_nwxsjm.png'

@@ -13,7 +13,6 @@ const date = () => {
 
 const CartFull = () => {
   const { cart, subTotal, clear, totalPrice } = useContext(cartContext);
-
   return (
     <>
       <div className='container mt-5 mb-5'>
@@ -27,7 +26,6 @@ const CartFull = () => {
               </div>
               <div className='card-body'>
                 {/* <!-- Single item --> */}
-
                 {cart.map((item) => (
                   <CartItem
                     subTotal={subTotal}
@@ -43,7 +41,6 @@ const CartFull = () => {
                     id={item.id}
                   />
                 ))}
-
                 {/* <!-- Single item --> */}
                 <span className='emptyTitle'>
                   <h5 className='text-center ' onClick={clear}>
@@ -68,7 +65,6 @@ const CartFull = () => {
               </div>
             </div>
           </div>
-
           <div className='col-md-4  '>
             <div className=' mb-1 '>
               <div className='card-header py-3 '>
@@ -89,7 +85,6 @@ const CartFull = () => {
                   <li className='list-group-item d-flex justify-content-between align-items-center px-0'>
                     <p className='futureDate'>Free Shipping</p>
                   </li>
-
                   <li className='list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3'>
                     <div>
                       <strong>Total: </strong>
@@ -100,9 +95,7 @@ const CartFull = () => {
                     </div>
                     <span id='anchor_strong'> </span>
                   </li>
-                  
                 </ul>
-
                 <Form />
               </div>
             </div>
