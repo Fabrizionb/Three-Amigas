@@ -30,6 +30,23 @@ Technologies Used
 
 *   CSS
 
+Dependencies Used
+-----------------
+
+* * *
+
+*   uiball/loaders
+
+*   firebase
+
+*   react-bootstrap
+
+*   react-spinners
+
+*   react-toastify
+
+*   react-router-dom
+
 Screenshots
 -----------
 
