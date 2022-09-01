@@ -30,14 +30,14 @@ Technologies Used
 
 *   CSS
 
+*   Firebase
+
 Dependencies Used
 -----------------
 
 * * *
 
 *   uiball/loaders
-
-*   firebase
 
 *   react-bootstrap
 
