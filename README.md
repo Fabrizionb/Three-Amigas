@@ -45,6 +45,8 @@ Dependencies Used
 
 *   react-toastify
 
+*   Sweetalert2
+
 *   react-router-dom
 
 Screenshots

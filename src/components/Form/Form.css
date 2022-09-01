@@ -37,3 +37,6 @@ form {
   background-color: var(--first-color) !important;
   transition: all 0.3s ease-in-out;
 }
+span.sw{
+  color:crimson;
+}

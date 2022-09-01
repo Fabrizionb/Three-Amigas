@@ -7,7 +7,7 @@ const Thanks = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/");
-    }, 5000);
+    }, 111110000);
     return () => clearTimeout(timer);
   }, []);
   return (
@@ -15,7 +15,7 @@ const Thanks = () => {
       <br></br>
       <PropagateLoader color='#66b1d8' size={5} />
       <p className='mt-4 mb-4'>
-        Redirecting to the main page in 5 seconds.{" "}
+        Redirecting to the main page in 10 seconds.{" "}
         <Link to='/'>Click here to go now.</Link>{" "}
       </p>
       <img

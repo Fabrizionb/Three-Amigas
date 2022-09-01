@@ -5,10 +5,11 @@ import { cartContext } from "../../Store/cartContext";
 import firestoreDB from "../../services/firebase";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
+import Swal from 'sweetalert2'
 
 const Form = () => {
   const { cart, setCart } = useContext(cartContext);
-  const [userData, setUserData] = useState({
+    const [userData, setUserData] = useState({
     name: "",
     email: "",
     telephone: "",
@@ -36,7 +37,15 @@ const Form = () => {
     const collectionRef = collection(firestoreDB, "orders");
     const order = await addDoc(collectionRef, ordenDeCompra);
     setOrderFirebase({ id: order.id, complete: true });
-    navigate("/thanks");
+    Swal.fire({
+      title: 'Thank You for you Order!',
+      text: `You Order Id is: "${order.id}", save for track it`,
+      imageUrl: 'https://res.cloudinary.com/dm01fzgtk/image/upload/v1661621605/thank-you-for-your-purchase-message-1_nwxsjm.png',
+      imageWidth: 600,
+      imageHeight: 420,
+      imageAlt: 'Custom image',
+    })
+    navigate("/");
     setCart([]);
   }
   function inputChangeHandler(e) {

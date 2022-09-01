@@ -8,13 +8,13 @@ function ItemList({ data, sortMinus, sortPlus }) {
     console.log(`You add ${count} products`);
   }
   const radioGroup = [
-    { name: "All", route: "/store/all" },
-    { name: "Jeans", route: "/store/jeans" },
-    { name: "jackets", route: "/store/jackets" },
-    { name: "Dresses", route: "/store/dresses" },
-    { name: "Tops", route: "/store/tops" },
-    { name: "Accesories", route: "/store/accesories" },
-    { name: "Outlet", route: "/store/outlet" },
+    { name: "All", route: "/store/all",id:0 },
+    { name: "Jeans", route: "/store/jeans",id:1 },
+    { name: "jackets", route: "/store/jackets",id:2 },
+    { name: "Dresses", route: "/store/dresses",id:3 },
+    { name: "Tops", route: "/store/tops",id:4 },
+    { name: "Accesories", route: "/store/accesories",id:5 },
+    { name: "Outlet", route: "/store/outlet",id:6 },
   ];
   let activeStyle = { color: "var(--first-color)" };
   return (
@@ -43,7 +43,7 @@ function ItemList({ data, sortMinus, sortPlus }) {
               {/* <!-- Radio group --> */}
               <ul>
                 {radioGroup.map((item) => (
-                  <li className='nav-item'>
+                  <li className='nav-item' key={item.id}>
                     <NavLink
                       className='nav-link'
                       to={item.route}
