@@ -24,15 +24,13 @@ export function CartProvider({ children }) {
         cart.map((product) => {
           return product.id === item.id
             ? {
-                stock: product.stock - quantity,
                 ...product,
-                quantity: product.quantity + quantity,
+                quantity: product.quantity + quantity >= product.stock ? product.stock : product.quantity + quantity
               }
             : product;
         })
       );
     } else {
-      item.stock -= quantity;
       const newItem = { ...item, quantity };
       setCart([...cart, newItem]);
     }
