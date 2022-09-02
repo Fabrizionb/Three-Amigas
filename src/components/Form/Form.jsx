@@ -38,8 +38,8 @@ const Form = () => {
     const order = await addDoc(collectionRef, ordenDeCompra);
     setOrderFirebase({ id: order.id, complete: true });
     Swal.fire({
-      title: 'Thank You for you Order!',
-      text: `You Order Id is: "${order.id}", save for track it`,
+      title: `Order Id ${order.id}`,
+      text: `Save your order id for track your purchase`,
       imageUrl: 'https://res.cloudinary.com/dm01fzgtk/image/upload/v1661621605/thank-you-for-your-purchase-message-1_nwxsjm.png',
       imageWidth: 600,
       imageHeight: 420,
