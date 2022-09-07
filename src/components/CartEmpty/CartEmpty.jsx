@@ -8,7 +8,7 @@ const CartEmpty = () => {
       <div className='text-center'>
         <Link to='/store/all'>
           <h4 className='cartEmptyTitle mt-5'>
-            The cart is Empty, go to Store!{" "}
+            The cart is Empty, go to Store!
             <i className='fa-solid fa-store'></i>
           </h4>
         </Link>
