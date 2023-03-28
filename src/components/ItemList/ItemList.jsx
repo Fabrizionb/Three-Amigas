@@ -10,7 +10,7 @@ function ItemList({ data, sortMinus, sortPlus }) {
   const radioGroup = [
     { name: "All", route: "/store/all",id:0 },
     { name: "Jeans", route: "/store/jeans",id:1 },
-    { name: "jackets", route: "/store/jackets",id:2 },
+    { name: "Jackets", route: "/store/jackets",id:2 },
     { name: "Dresses", route: "/store/dresses",id:3 },
     { name: "Tops", route: "/store/tops",id:4 },
     { name: "Accesories", route: "/store/accesories",id:5 },
